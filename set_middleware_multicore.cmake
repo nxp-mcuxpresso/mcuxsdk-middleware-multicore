@@ -103,21 +103,12 @@ endif()
 endif()
 
 
-if (CONFIG_USE_middleware_multicore_remoteproc_loadscript)
-# Add set(CONFIG_USE_middleware_multicore_remoteproc_loadscript true) in config.cmake to use this component
-
-message("middleware_multicore_remoteproc_loadscript component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-
-endif()
-
-
 if (CONFIG_USE_middleware_multicore_erpc_common)
 # Add set(CONFIG_USE_middleware_multicore_erpc_common true) in config.cmake to use this component
 
 message("middleware_multicore_erpc_common component is included from ${CMAKE_CURRENT_LIST_FILE}.")
 
-if(((CONFIG_DEVICE_ID STREQUAL K32L2B11xxxxA OR CONFIG_DEVICE_ID STREQUAL K32L2B21xxxxA OR CONFIG_DEVICE_ID STREQUAL K32L2B31xxxxA OR CONFIG_DEVICE_ID STREQUAL K32L3A60xxx OR CONFIG_DEVICE_ID STREQUAL LPC5534 OR CONFIG_DEVICE_ID STREQUAL LPC5536 OR CONFIG_DEVICE_ID STREQUAL LPC55S36 OR CONFIG_DEVICE_ID STREQUAL LPC55S69 OR CONFIG_DEVICE_ID STREQUAL LPC55S66 OR CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1166xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1171xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1172xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1176xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT595S OR CONFIG_DEVICE_ID STREQUAL MIMXRT633S OR CONFIG_DEVICE_ID STREQUAL MIMXRT685S OR CONFIG_DEVICE_ID STREQUAL MCIMX7U3xxxxx OR CONFIG_DEVICE_ID STREQUAL MCIMX7U5xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMX8UD3xxx08 OR CONFIG_DEVICE_ID STREQUAL MIMX8UD5xxx08 OR CONFIG_DEVICE_ID STREQUAL MIMX8UD7xxx08 OR CONFIG_DEVICE_ID STREQUAL MIMX8US3xxx08 OR CONFIG_DEVICE_ID STREQUAL MIMX8US5xxx08) OR (CONFIG_BOARD STREQUAL frdmk22f OR CONFIG_BOARD STREQUAL frdmk32l2b OR CONFIG_BOARD STREQUAL evkmcimx7ulp OR CONFIG_BOARD STREQUAL frdmk32l3a6 OR CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt685 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
+if(((CONFIG_DEVICE_ID STREQUAL LPC5534 OR CONFIG_DEVICE_ID STREQUAL LPC5536 OR CONFIG_DEVICE_ID STREQUAL LPC55S36 OR CONFIG_DEVICE_ID STREQUAL LPC55S69 OR CONFIG_DEVICE_ID STREQUAL LPC55S66 OR CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1166xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1171xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1172xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1176xxxxx) OR (CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
 
 target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}/./erpc/erpc_c/infra/erpc_basic_codec.cpp
@@ -922,7 +913,7 @@ if (CONFIG_USE_middleware_multicore_erpc)
 
 message("middleware_multicore_erpc component is included from ${CMAKE_CURRENT_LIST_FILE}.")
 
-if(((CONFIG_DEVICE_ID STREQUAL K32L2B11xxxxA OR CONFIG_DEVICE_ID STREQUAL K32L2B21xxxxA OR CONFIG_DEVICE_ID STREQUAL K32L2B31xxxxA OR CONFIG_DEVICE_ID STREQUAL K32L3A60xxx OR CONFIG_DEVICE_ID STREQUAL LPC5534 OR CONFIG_DEVICE_ID STREQUAL LPC5536 OR CONFIG_DEVICE_ID STREQUAL LPC55S36 OR CONFIG_DEVICE_ID STREQUAL LPC55S69 OR CONFIG_DEVICE_ID STREQUAL LPC55S66 OR CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1166xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1171xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1172xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1176xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT595S OR CONFIG_DEVICE_ID STREQUAL MIMXRT633S OR CONFIG_DEVICE_ID STREQUAL MIMXRT685S OR CONFIG_DEVICE_ID STREQUAL MCIMX7U3xxxxx OR CONFIG_DEVICE_ID STREQUAL MCIMX7U5xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMX8UD3xxx08 OR CONFIG_DEVICE_ID STREQUAL MIMX8UD5xxx08 OR CONFIG_DEVICE_ID STREQUAL MIMX8UD7xxx08 OR CONFIG_DEVICE_ID STREQUAL MIMX8US3xxx08 OR CONFIG_DEVICE_ID STREQUAL MIMX8US5xxx08) OR (CONFIG_BOARD STREQUAL frdmk22f OR CONFIG_BOARD STREQUAL frdmk32l2b OR CONFIG_BOARD STREQUAL evkmcimx7ulp OR CONFIG_BOARD STREQUAL frdmk32l3a6 OR CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt685 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
+if(((CONFIG_DEVICE_ID STREQUAL LPC5534 OR CONFIG_DEVICE_ID STREQUAL LPC5536 OR CONFIG_DEVICE_ID STREQUAL LPC55S36 OR CONFIG_DEVICE_ID STREQUAL LPC55S69 OR CONFIG_DEVICE_ID STREQUAL LPC55S66 OR CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1166xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1171xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1172xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1176xxxxx) OR (CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
 
 else()
 
@@ -938,7 +929,7 @@ if (CONFIG_USE_middleware_multicore_mcmgr)
 
 message("middleware_multicore_mcmgr component is included from ${CMAKE_CURRENT_LIST_FILE}.")
 
-if(((CONFIG_DEVICE_ID STREQUAL K32L3A60xxx OR CONFIG_DEVICE_ID STREQUAL LPC55S69 OR CONFIG_DEVICE_ID STREQUAL LPC55S66 OR CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1166xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1171xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1172xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1176xxxxx) OR (CONFIG_BOARD STREQUAL frdmk32l3a6 OR CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170)))
+if(((CONFIG_DEVICE_ID STREQUAL LPC55S69 OR CONFIG_DEVICE_ID STREQUAL LPC55S66 OR CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1166xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1171xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1172xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1176xxxxx) OR (CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170)))
 
 target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}/./mcmgr/src/mcmgr.c
@@ -960,872 +951,6 @@ endif()
 else()
 
 message(SEND_ERROR "middleware_multicore_mcmgr dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_mcmgr_k32l3a6)
-# Add set(CONFIG_USE_middleware_multicore_mcmgr_k32l3a6 true) in config.cmake to use this component
-
-message("middleware_multicore_mcmgr_k32l3a6 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(CONFIG_USE_middleware_multicore_mcmgr AND CONFIG_USE_driver_mu AND (CONFIG_BOARD STREQUAL frdmk32l3a6))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./mcmgr/src/mcmgr_internal_core_api_k32l3a6.c
-  ${CMAKE_CURRENT_LIST_DIR}/./mcmgr/src/mcmgr_mu_internal.c
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_mcmgr_k32l3a6 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_k32l3a6_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_k32l3a6_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_k32l3a6_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL frdmk32l3a6))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/k32l3a6/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/k32l3a6
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_k32l3a6_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_k32l3a6_freertos)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_k32l3a6_freertos true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_k32l3a6_freertos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL frdmk32l3a6) AND CONFIG_USE_middleware_freertos-kernel AND CONFIG_USE_middleware_freertos-kernel_heap_4)
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/k32l3a6/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/k32l3a6
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_k32l3a6_freertos dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_bm_config_k32l3a6)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_bm_config_k32l3a6 true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_bm_config_k32l3a6 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(CONFIG_USE_middleware_multicore_rpmsg_lite AND CONFIG_USE_middleware_multicore_rpmsg_lite_bm AND CONFIG_USE_middleware_multicore_mcmgr_k32l3a6 AND (CONFIG_BOARD STREQUAL frdmk32l3a6) AND CONFIG_USE_middleware_multicore_rpmsg_lite_k32l3a6_bm)
-
-add_config_file(${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application/rpmsg_config.h "" middleware_multicore_rpmsg_lite_bm_config_k32l3a6)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_bm_config_k32l3a6 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_freertos_config_k32l3a6)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_freertos_config_k32l3a6 true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_freertos_config_k32l3a6 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(CONFIG_USE_middleware_multicore_rpmsg_lite AND CONFIG_USE_middleware_multicore_rpmsg_lite_freertos AND CONFIG_USE_middleware_multicore_mcmgr_k32l3a6 AND (CONFIG_BOARD STREQUAL frdmk32l3a6) AND CONFIG_USE_middleware_multicore_rpmsg_lite_k32l3a6_freertos)
-
-add_config_file(${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application/rpmsg_config.h "" middleware_multicore_rpmsg_lite_freertos_config_k32l3a6)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_freertos_config_k32l3a6 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL K32L3A60xxx OR CONFIG_DEVICE_ID STREQUAL LPC55S69 OR CONFIG_DEVICE_ID STREQUAL LPC55S66 OR CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1166xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1171xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1172xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1176xxxxx OR CONFIG_DEVICE_ID STREQUAL MCIMX7U3xxxxx OR CONFIG_DEVICE_ID STREQUAL MCIMX7U5xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT595S OR CONFIG_DEVICE_ID STREQUAL MIMXRT633S OR CONFIG_DEVICE_ID STREQUAL MIMXRT685S OR CONFIG_DEVICE_ID STREQUAL MIMX8MD6xxxJZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MD6xxxHZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MD7xxxJZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MD7xxxHZ OR CONFIG_DEVICE_ID STREQUAL MIMX8ML3xxxLZ OR CONFIG_DEVICE_ID STREQUAL MIMX8ML3xxxKZ OR CONFIG_DEVICE_ID STREQUAL MIMX8ML4xxxLZ OR CONFIG_DEVICE_ID STREQUAL MIMX8ML4xxxKZ OR CONFIG_DEVICE_ID STREQUAL MIMX8ML6xxxLZ OR CONFIG_DEVICE_ID STREQUAL MIMX8ML6xxxKZ OR CONFIG_DEVICE_ID STREQUAL MIMX8ML8xxxLZ OR CONFIG_DEVICE_ID STREQUAL MIMX8ML8xxxKZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MM1xxxLZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MM1xxxKZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MM2xxxLZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MM2xxxKZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MM3xxxLZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MM3xxxKZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MM4xxxLZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MM4xxxKZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MM5xxxLZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MM5xxxKZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MM6xxxLZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MM6xxxKZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MN1xxxJZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MN1xxxIZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MN2xxxJZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MN2xxxIZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MN3xxxJZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MN3xxxIZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MN4xxxJZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MN4xxxIZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MN5xxxJZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MN5xxxIZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MN6xxxJZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MN6xxxIZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MQ5xxxJZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MQ5xxxHZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MQ6xxxJZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MQ6xxxHZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MQ7xxxJZ OR CONFIG_DEVICE_ID STREQUAL MIMX8MQ7xxxHZ OR CONFIG_DEVICE_ID STREQUAL MIMX8UD3xxx08 OR CONFIG_DEVICE_ID STREQUAL MIMX8UD5xxx08 OR CONFIG_DEVICE_ID STREQUAL MIMX8UD7xxx08 OR CONFIG_DEVICE_ID STREQUAL MIMX8US3xxx08 OR CONFIG_DEVICE_ID STREQUAL MIMX8US5xxx08) OR (CONFIG_BOARD STREQUAL frdmk32l3a6 OR CONFIG_BOARD STREQUAL evkmcimx7ulp OR CONFIG_BOARD STREQUAL evkmimx8mq OR CONFIG_BOARD STREQUAL evkmimxrt685 OR CONFIG_BOARD STREQUAL mimxrt685audevk OR CONFIG_BOARD STREQUAL evkmimxrt595 OR CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL evkmimx8mm OR CONFIG_BOARD STREQUAL evkmimx8mn OR CONFIG_BOARD STREQUAL evkmimx8mnddr3l OR CONFIG_BOARD STREQUAL evkmimx8mp OR CONFIG_BOARD STREQUAL evkmimx8ulp OR CONFIG_BOARD STREQUAL evk9mimx8ulp OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170)) AND (CONFIG_USE_middleware_multicore_rpmsg_lite_bm OR CONFIG_USE_middleware_multicore_rpmsg_lite_freertos OR CONFIG_USE_middleware_multicore_rpmsg_lite_xos OR CONFIG_USE_middleware_multicore_rpmsg_lite_azurertos))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/common/llist.c
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/rpmsg_lite.c
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/rpmsg_ns.c
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/virtio/virtqueue.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_erpc_common_multicore)
-# Add set(CONFIG_USE_middleware_multicore_erpc_common_multicore true) in config.cmake to use this component
-
-message("middleware_multicore_erpc_common_multicore component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL frdmk22f OR CONFIG_BOARD STREQUAL frdmk32l2b OR CONFIG_BOARD STREQUAL evkmcimx7ulp OR CONFIG_BOARD STREQUAL frdmk32l3a6 OR CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt685 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_error_handler.cpp
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_erpc_common_multicore dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_erpc_common_multicore_matrix_multiply_client)
-# Add set(CONFIG_USE_middleware_multicore_erpc_common_multicore_matrix_multiply_client true) in config.cmake to use this component
-
-message("middleware_multicore_erpc_common_multicore_matrix_multiply_client component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL frdmk22f OR CONFIG_BOARD STREQUAL frdmk32l2b OR CONFIG_BOARD STREQUAL evkmcimx7ulp OR CONFIG_BOARD STREQUAL frdmk32l3a6 OR CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt685 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_client.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_interface.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/c_erpc_matrix_multiply_client.cpp
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_erpc_common_multicore_matrix_multiply_client dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_erpc_common_multicore_matrix_multiply_server)
-# Add set(CONFIG_USE_middleware_multicore_erpc_common_multicore_matrix_multiply_server true) in config.cmake to use this component
-
-message("middleware_multicore_erpc_common_multicore_matrix_multiply_server component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL frdmk22f OR CONFIG_BOARD STREQUAL frdmk32l2b OR CONFIG_BOARD STREQUAL evkmcimx7ulp OR CONFIG_BOARD STREQUAL frdmk32l3a6 OR CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt685 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_server.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_interface.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/c_erpc_matrix_multiply_server.cpp
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_erpc_common_multicore_matrix_multiply_server dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_erpc_common_two_way_rpc_core0)
-# Add set(CONFIG_USE_middleware_multicore_erpc_common_two_way_rpc_core0 true) in config.cmake to use this component
-
-message("middleware_multicore_erpc_common_two_way_rpc_core0 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL frdmk22f OR CONFIG_BOARD STREQUAL frdmk32l2b OR CONFIG_BOARD STREQUAL evkmcimx7ulp OR CONFIG_BOARD STREQUAL frdmk32l3a6 OR CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt685 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core0Interface_client.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/c_erpc_two_way_rpc_Core0Interface_client.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core0Interface_interface.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core1Interface_server.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/c_erpc_two_way_rpc_Core1Interface_server.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core1Interface_interface.cpp
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_erpc_common_two_way_rpc_core0 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_erpc_common_two_way_rpc_core1)
-# Add set(CONFIG_USE_middleware_multicore_erpc_common_two_way_rpc_core1 true) in config.cmake to use this component
-
-message("middleware_multicore_erpc_common_two_way_rpc_core1 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL frdmk22f OR CONFIG_BOARD STREQUAL frdmk32l2b OR CONFIG_BOARD STREQUAL evkmcimx7ulp OR CONFIG_BOARD STREQUAL frdmk32l3a6 OR CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt685 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core1Interface_client.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/c_erpc_two_way_rpc_Core1Interface_client.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core1Interface_interface.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core0Interface_server.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/c_erpc_two_way_rpc_Core0Interface_server.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core0Interface_interface.cpp
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_erpc_common_two_way_rpc_core1 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_evkmimxrt685_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_evkmimxrt685_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_evkmimxrt685_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimxrt685))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imxrt600_m33/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imxrt600_m33
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_evkmimxrt685_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_evkmimxrt685_hifi4_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_evkmimxrt685_hifi4_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_evkmimxrt685_hifi4_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimxrt685))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imxrt600_hifi4/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imxrt600_hifi4
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_evkmimxrt685_hifi4_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_evkmimxrt685_freertos)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_evkmimxrt685_freertos true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_evkmimxrt685_freertos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimxrt685) AND CONFIG_USE_middleware_freertos-kernel AND CONFIG_USE_middleware_freertos-kernel_heap_4)
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imxrt600_m33/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imxrt600_m33
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_evkmimxrt685_freertos dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_mimxrt685audevk_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_mimxrt685audevk_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_mimxrt685audevk_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL mimxrt685audevk))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imxrt600_m33/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imxrt600_m33
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_mimxrt685audevk_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_mimxrt685audevk_hifi4_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_mimxrt685audevk_hifi4_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_mimxrt685audevk_hifi4_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL mimxrt685audevk))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imxrt600_hifi4/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imxrt600_hifi4
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_mimxrt685audevk_hifi4_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_mimxrt685audevk_freertos)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_mimxrt685audevk_freertos true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_mimxrt685audevk_freertos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL mimxrt685audevk) AND CONFIG_USE_middleware_freertos-kernel AND CONFIG_USE_middleware_freertos-kernel_heap_4)
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imxrt600_m33/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imxrt600_m33
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_mimxrt685audevk_freertos dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_erpc_common_multiprocessor)
-# Add set(CONFIG_USE_middleware_multicore_erpc_common_multiprocessor true) in config.cmake to use this component
-
-message("middleware_multicore_erpc_common_multiprocessor component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL frdmk22f OR CONFIG_BOARD STREQUAL frdmk32l2b OR CONFIG_BOARD STREQUAL evkmcimx7ulp OR CONFIG_BOARD STREQUAL frdmk32l3a6 OR CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt685 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_error_handler.cpp
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_erpc_common_multiprocessor dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_erpc_common_multiprocessor_matrix_multiply_client)
-# Add set(CONFIG_USE_middleware_multicore_erpc_common_multiprocessor_matrix_multiply_client true) in config.cmake to use this component
-
-message("middleware_multicore_erpc_common_multiprocessor_matrix_multiply_client component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL frdmk22f OR CONFIG_BOARD STREQUAL frdmk32l2b OR CONFIG_BOARD STREQUAL evkmcimx7ulp OR CONFIG_BOARD STREQUAL frdmk32l3a6 OR CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt685 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_client.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_interface.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service/c_erpc_matrix_multiply_client.cpp
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_erpc_common_multiprocessor_matrix_multiply_client dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_erpc_common_multiprocessor_matrix_multiply_server)
-# Add set(CONFIG_USE_middleware_multicore_erpc_common_multiprocessor_matrix_multiply_server true) in config.cmake to use this component
-
-message("middleware_multicore_erpc_common_multiprocessor_matrix_multiply_server component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL frdmk22f OR CONFIG_BOARD STREQUAL frdmk32l2b OR CONFIG_BOARD STREQUAL evkmcimx7ulp OR CONFIG_BOARD STREQUAL frdmk32l3a6 OR CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt685 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_server.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_interface.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service/c_erpc_matrix_multiply_server.cpp
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_erpc_common_multiprocessor_matrix_multiply_server dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_imx8ulp_m33_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_imx8ulp_m33_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_imx8ulp_m33_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimx8ulp OR CONFIG_BOARD STREQUAL evk9mimx8ulp))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imx8ulp_m33/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imx8ulp_m33
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_imx8ulp_m33_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_imx8ulp_m33_freertos)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_imx8ulp_m33_freertos true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_imx8ulp_m33_freertos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimx8ulp OR CONFIG_BOARD STREQUAL evk9mimx8ulp) AND CONFIG_USE_middleware_freertos-kernel AND CONFIG_USE_middleware_freertos-kernel_heap_4)
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imx8ulp_m33/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imx8ulp_m33
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_imx8ulp_m33_freertos dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_imx8ulp_fusionf1_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_imx8ulp_fusionf1_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_imx8ulp_fusionf1_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimx8ulp OR CONFIG_BOARD STREQUAL evk9mimx8ulp))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imx8ulp_fusionf1/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imx8ulp_fusionf1
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_imx8ulp_fusionf1_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mm_m4_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mm_m4_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_imx8mm_m4_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimx8mm))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imx8mm_m4/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imx8mm_m4
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_imx8mm_m4_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mm_m4_freertos)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mm_m4_freertos true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_imx8mm_m4_freertos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimx8mm) AND CONFIG_USE_middleware_freertos-kernel AND CONFIG_USE_middleware_freertos-kernel_heap_4)
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imx8mm_m4/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imx8mm_m4
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_imx8mm_m4_freertos dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_bm_config)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_bm_config true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_bm_config component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(CONFIG_USE_middleware_multicore_rpmsg_lite AND (CONFIG_BOARD STREQUAL evkmimx8mq) AND CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mq_m4_bm)
-
-add_config_file(${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application/rpmsg_config.h "" middleware_multicore_rpmsg_lite_bm_config)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_bm_config dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_freertos_config)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_freertos_config true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_freertos_config component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(CONFIG_USE_middleware_multicore_rpmsg_lite AND (CONFIG_BOARD STREQUAL evkmimx8mq) AND CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mq_m4_freertos)
-
-add_config_file(${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application/rpmsg_config.h "" middleware_multicore_rpmsg_lite_freertos_config)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_freertos_config dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mq_m4_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mq_m4_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_imx8mq_m4_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimx8mq))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imx8mq_m4/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imx8mq_m4
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_imx8mq_m4_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mq_m4_freertos)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mq_m4_freertos true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_imx8mq_m4_freertos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimx8mq) AND CONFIG_USE_middleware_freertos-kernel)
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imx8mq_m4/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imx8mq_m4
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_imx8mq_m4_freertos dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mn_m7_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mn_m7_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_imx8mn_m7_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimx8mn OR CONFIG_BOARD STREQUAL evkmimx8mnddr3l))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imx8mn_m7/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imx8mn_m7
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_imx8mn_m7_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mn_m7_freertos)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mn_m7_freertos true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_imx8mn_m7_freertos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimx8mn OR CONFIG_BOARD STREQUAL evkmimx8mnddr3l) AND CONFIG_USE_middleware_freertos-kernel AND CONFIG_USE_middleware_freertos-kernel_heap_4)
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imx8mn_m7/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imx8mn_m7
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_imx8mn_m7_freertos dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_mcmgr_lpc55s69)
-# Add set(CONFIG_USE_middleware_multicore_mcmgr_lpc55s69 true) in config.cmake to use this component
-
-message("middleware_multicore_mcmgr_lpc55s69 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(CONFIG_USE_middleware_multicore_mcmgr AND CONFIG_USE_driver_mailbox)
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./mcmgr/src/mcmgr_internal_core_api_lpc55s69.c
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_mcmgr_lpc55s69 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_lpcxpresso55s69_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_lpcxpresso55s69_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_lpcxpresso55s69_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL lpcxpresso55s69))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/lpc55s69/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/lpc55s69
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_lpcxpresso55s69_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_lpcxpresso55s69_freertos)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_lpcxpresso55s69_freertos true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_lpcxpresso55s69_freertos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL lpcxpresso55s69) AND CONFIG_USE_middleware_freertos-kernel AND CONFIG_USE_middleware_freertos-kernel_heap_4)
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/lpc55s69/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/lpc55s69
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_lpcxpresso55s69_freertos dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_bm_config_lpcxpresso55s69)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_bm_config_lpcxpresso55s69 true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_bm_config_lpcxpresso55s69 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(CONFIG_USE_middleware_multicore_rpmsg_lite AND CONFIG_USE_middleware_multicore_rpmsg_lite_bm AND CONFIG_USE_middleware_multicore_mcmgr_lpc55s69 AND (CONFIG_BOARD STREQUAL lpcxpresso55s69) AND CONFIG_USE_middleware_multicore_rpmsg_lite_lpcxpresso55s69_bm)
-
-add_config_file(${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application/rpmsg_config.h "" middleware_multicore_rpmsg_lite_bm_config_lpcxpresso55s69)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_bm_config_lpcxpresso55s69 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_freertos_config_lpcxpresso55s69)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_freertos_config_lpcxpresso55s69 true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_freertos_config_lpcxpresso55s69 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(CONFIG_USE_middleware_multicore_rpmsg_lite AND CONFIG_USE_middleware_multicore_rpmsg_lite_freertos AND CONFIG_USE_middleware_multicore_mcmgr_lpc55s69 AND (CONFIG_BOARD STREQUAL lpcxpresso55s69) AND CONFIG_USE_middleware_multicore_rpmsg_lite_lpcxpresso55s69_freertos)
-
-add_config_file(${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application/rpmsg_config.h "" middleware_multicore_rpmsg_lite_freertos_config_lpcxpresso55s69)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_freertos_config_lpcxpresso55s69 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
 
 endif()
 
@@ -1945,6 +1070,243 @@ endif()
 endif()
 
 
+if (CONFIG_USE_middleware_multicore_rpmsg_lite)
+# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite true) in config.cmake to use this component
+
+message("middleware_multicore_rpmsg_lite component is included from ${CMAKE_CURRENT_LIST_FILE}.")
+
+if(((CONFIG_DEVICE_ID STREQUAL LPC55S69 OR CONFIG_DEVICE_ID STREQUAL LPC55S66 OR CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1166xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1171xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1172xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1176xxxxx) OR (CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170)) AND (CONFIG_USE_middleware_multicore_rpmsg_lite_bm OR CONFIG_USE_middleware_multicore_rpmsg_lite_freertos OR CONFIG_USE_middleware_multicore_rpmsg_lite_xos OR CONFIG_USE_middleware_multicore_rpmsg_lite_azurertos))
+
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/common/llist.c
+  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/rpmsg_lite.c
+  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/rpmsg_ns.c
+  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/virtio/virtqueue.c
+)
+
+target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
+  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include
+)
+
+else()
+
+message(SEND_ERROR "middleware_multicore_rpmsg_lite dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
+
+endif()
+
+endif()
+
+
+if (CONFIG_USE_middleware_multicore_erpc_common_multicore)
+# Add set(CONFIG_USE_middleware_multicore_erpc_common_multicore true) in config.cmake to use this component
+
+message("middleware_multicore_erpc_common_multicore component is included from ${CMAKE_CURRENT_LIST_FILE}.")
+
+if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
+
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_error_handler.cpp
+)
+
+target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common
+)
+
+else()
+
+message(SEND_ERROR "middleware_multicore_erpc_common_multicore dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
+
+endif()
+
+endif()
+
+
+if (CONFIG_USE_middleware_multicore_erpc_common_multicore_matrix_multiply_client)
+# Add set(CONFIG_USE_middleware_multicore_erpc_common_multicore_matrix_multiply_client true) in config.cmake to use this component
+
+message("middleware_multicore_erpc_common_multicore_matrix_multiply_client component is included from ${CMAKE_CURRENT_LIST_FILE}.")
+
+if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
+
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_client.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_interface.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/c_erpc_matrix_multiply_client.cpp
+)
+
+target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service
+)
+
+else()
+
+message(SEND_ERROR "middleware_multicore_erpc_common_multicore_matrix_multiply_client dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
+
+endif()
+
+endif()
+
+
+if (CONFIG_USE_middleware_multicore_erpc_common_multicore_matrix_multiply_server)
+# Add set(CONFIG_USE_middleware_multicore_erpc_common_multicore_matrix_multiply_server true) in config.cmake to use this component
+
+message("middleware_multicore_erpc_common_multicore_matrix_multiply_server component is included from ${CMAKE_CURRENT_LIST_FILE}.")
+
+if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
+
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_server.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_interface.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/c_erpc_matrix_multiply_server.cpp
+)
+
+target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service
+)
+
+else()
+
+message(SEND_ERROR "middleware_multicore_erpc_common_multicore_matrix_multiply_server dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
+
+endif()
+
+endif()
+
+
+if (CONFIG_USE_middleware_multicore_erpc_common_two_way_rpc_core0)
+# Add set(CONFIG_USE_middleware_multicore_erpc_common_two_way_rpc_core0 true) in config.cmake to use this component
+
+message("middleware_multicore_erpc_common_two_way_rpc_core0 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
+
+if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
+
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core0Interface_client.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/c_erpc_two_way_rpc_Core0Interface_client.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core0Interface_interface.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core1Interface_server.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/c_erpc_two_way_rpc_Core1Interface_server.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core1Interface_interface.cpp
+)
+
+target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service
+)
+
+else()
+
+message(SEND_ERROR "middleware_multicore_erpc_common_two_way_rpc_core0 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
+
+endif()
+
+endif()
+
+
+if (CONFIG_USE_middleware_multicore_erpc_common_two_way_rpc_core1)
+# Add set(CONFIG_USE_middleware_multicore_erpc_common_two_way_rpc_core1 true) in config.cmake to use this component
+
+message("middleware_multicore_erpc_common_two_way_rpc_core1 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
+
+if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
+
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core1Interface_client.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/c_erpc_two_way_rpc_Core1Interface_client.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core1Interface_interface.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core0Interface_server.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/c_erpc_two_way_rpc_Core0Interface_server.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core0Interface_interface.cpp
+)
+
+target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service
+)
+
+else()
+
+message(SEND_ERROR "middleware_multicore_erpc_common_two_way_rpc_core1 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
+
+endif()
+
+endif()
+
+
+if (CONFIG_USE_middleware_multicore_erpc_common_multiprocessor)
+# Add set(CONFIG_USE_middleware_multicore_erpc_common_multiprocessor true) in config.cmake to use this component
+
+message("middleware_multicore_erpc_common_multiprocessor component is included from ${CMAKE_CURRENT_LIST_FILE}.")
+
+if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
+
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_error_handler.cpp
+)
+
+target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common
+)
+
+else()
+
+message(SEND_ERROR "middleware_multicore_erpc_common_multiprocessor dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
+
+endif()
+
+endif()
+
+
+if (CONFIG_USE_middleware_multicore_erpc_common_multiprocessor_matrix_multiply_client)
+# Add set(CONFIG_USE_middleware_multicore_erpc_common_multiprocessor_matrix_multiply_client true) in config.cmake to use this component
+
+message("middleware_multicore_erpc_common_multiprocessor_matrix_multiply_client component is included from ${CMAKE_CURRENT_LIST_FILE}.")
+
+if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
+
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_client.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_interface.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service/c_erpc_matrix_multiply_client.cpp
+)
+
+target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service
+)
+
+else()
+
+message(SEND_ERROR "middleware_multicore_erpc_common_multiprocessor_matrix_multiply_client dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
+
+endif()
+
+endif()
+
+
+if (CONFIG_USE_middleware_multicore_erpc_common_multiprocessor_matrix_multiply_server)
+# Add set(CONFIG_USE_middleware_multicore_erpc_common_multiprocessor_matrix_multiply_server true) in config.cmake to use this component
+
+message("middleware_multicore_erpc_common_multiprocessor_matrix_multiply_server component is included from ${CMAKE_CURRENT_LIST_FILE}.")
+
+if(((CONFIG_DEVICE_ID STREQUAL MIMXRT1165xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1173xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1175xxxxx OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxA OR CONFIG_DEVICE_ID STREQUAL MIMXRT1062xxxxB) OR (CONFIG_BOARD STREQUAL lpcxpresso55s69 OR CONFIG_BOARD STREQUAL lpcxpresso55s36 OR CONFIG_BOARD STREQUAL evkmimxrt1160 OR CONFIG_BOARD STREQUAL evkmimxrt1170 OR CONFIG_BOARD STREQUAL evkbmimxrt1170 OR CONFIG_BOARD STREQUAL evkmimxrt1060)))
+
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_server.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_interface.cpp
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service/c_erpc_matrix_multiply_server.cpp
+)
+
+target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
+  ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service
+)
+
+else()
+
+message(SEND_ERROR "middleware_multicore_erpc_common_multiprocessor_matrix_multiply_server dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
+
+endif()
+
+endif()
+
+
 if (CONFIG_USE_middleware_multicore_mcmgr_imxrt1160)
 # Add set(CONFIG_USE_middleware_multicore_mcmgr_imxrt1160 true) in config.cmake to use this component
 
@@ -2058,62 +1420,82 @@ endif()
 endif()
 
 
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_imx7ulp_m4_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_imx7ulp_m4_bm true) in config.cmake to use this component
+if (CONFIG_USE_middleware_multicore_mcmgr_lpc55s69)
+# Add set(CONFIG_USE_middleware_multicore_mcmgr_lpc55s69 true) in config.cmake to use this component
 
-message("middleware_multicore_rpmsg_lite_imx7ulp_m4_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
+message("middleware_multicore_mcmgr_lpc55s69 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
 
-if((CONFIG_BOARD STREQUAL evkmcimx7ulp))
+if(CONFIG_USE_middleware_multicore_mcmgr AND CONFIG_USE_driver_mailbox)
 
 target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imx7ulp_m4/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imx7ulp_m4
+  ${CMAKE_CURRENT_LIST_DIR}/./mcmgr/src/mcmgr_internal_core_api_lpc55s69.c
 )
 
 else()
 
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_imx7ulp_m4_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
+message(SEND_ERROR "middleware_multicore_mcmgr_lpc55s69 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
 
 endif()
 
 endif()
 
 
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_imx7ulp_m4_freertos)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_imx7ulp_m4_freertos true) in config.cmake to use this component
+if (CONFIG_USE_middleware_multicore_rpmsg_lite_lpcxpresso55s69_bm)
+# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_lpcxpresso55s69_bm true) in config.cmake to use this component
 
-message("middleware_multicore_rpmsg_lite_imx7ulp_m4_freertos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
+message("middleware_multicore_rpmsg_lite_lpcxpresso55s69_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
 
-if((CONFIG_BOARD STREQUAL evkmcimx7ulp) AND CONFIG_USE_middleware_freertos-kernel AND CONFIG_USE_middleware_freertos-kernel_heap_4)
+if((CONFIG_BOARD STREQUAL lpcxpresso55s69))
 
 target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imx7ulp_m4/rpmsg_platform.c
+  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/lpc55s69/rpmsg_platform.c
 )
 
 target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imx7ulp_m4
+  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/lpc55s69
 )
 
 else()
 
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_imx7ulp_m4_freertos dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
+message(SEND_ERROR "middleware_multicore_rpmsg_lite_lpcxpresso55s69_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
 
 endif()
 
 endif()
 
 
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_bm_config_imx7ulp_m4)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_bm_config_imx7ulp_m4 true) in config.cmake to use this component
+if (CONFIG_USE_middleware_multicore_rpmsg_lite_lpcxpresso55s69_freertos)
+# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_lpcxpresso55s69_freertos true) in config.cmake to use this component
 
-message("middleware_multicore_rpmsg_lite_bm_config_imx7ulp_m4 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
+message("middleware_multicore_rpmsg_lite_lpcxpresso55s69_freertos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
 
-if(CONFIG_USE_middleware_multicore_rpmsg_lite AND CONFIG_USE_middleware_multicore_rpmsg_lite_bm AND (CONFIG_BOARD STREQUAL evkmcimx7ulp) AND CONFIG_USE_middleware_multicore_rpmsg_lite_imx7ulp_m4_bm)
+if((CONFIG_BOARD STREQUAL lpcxpresso55s69) AND CONFIG_USE_middleware_freertos-kernel AND CONFIG_USE_middleware_freertos-kernel_heap_4)
 
-add_config_file(${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application/rpmsg_config.h "" middleware_multicore_rpmsg_lite_bm_config_imx7ulp_m4)
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/lpc55s69/rpmsg_platform.c
+)
+
+target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
+  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/lpc55s69
+)
+
+else()
+
+message(SEND_ERROR "middleware_multicore_rpmsg_lite_lpcxpresso55s69_freertos dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
+
+endif()
+
+endif()
+
+
+if (CONFIG_USE_middleware_multicore_rpmsg_lite_bm_config_lpcxpresso55s69)
+# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_bm_config_lpcxpresso55s69 true) in config.cmake to use this component
+
+message("middleware_multicore_rpmsg_lite_bm_config_lpcxpresso55s69 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
+
+if(CONFIG_USE_middleware_multicore_rpmsg_lite AND CONFIG_USE_middleware_multicore_rpmsg_lite_bm AND CONFIG_USE_middleware_multicore_mcmgr_lpc55s69 AND (CONFIG_BOARD STREQUAL lpcxpresso55s69) AND CONFIG_USE_middleware_multicore_rpmsg_lite_lpcxpresso55s69_bm)
+
+add_config_file(${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application/rpmsg_config.h "" middleware_multicore_rpmsg_lite_bm_config_lpcxpresso55s69)
 
 target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
   ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application
@@ -2121,21 +1503,21 @@ target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
 
 else()
 
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_bm_config_imx7ulp_m4 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
+message(SEND_ERROR "middleware_multicore_rpmsg_lite_bm_config_lpcxpresso55s69 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
 
 endif()
 
 endif()
 
 
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_freertos_config_imx7ulp_m4)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_freertos_config_imx7ulp_m4 true) in config.cmake to use this component
+if (CONFIG_USE_middleware_multicore_rpmsg_lite_freertos_config_lpcxpresso55s69)
+# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_freertos_config_lpcxpresso55s69 true) in config.cmake to use this component
 
-message("middleware_multicore_rpmsg_lite_freertos_config_imx7ulp_m4 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
+message("middleware_multicore_rpmsg_lite_freertos_config_lpcxpresso55s69 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
 
-if(CONFIG_USE_middleware_multicore_rpmsg_lite AND CONFIG_USE_middleware_multicore_rpmsg_lite_freertos AND (CONFIG_BOARD STREQUAL evkmcimx7ulp) AND CONFIG_USE_middleware_multicore_rpmsg_lite_imx7ulp_m4_freertos)
+if(CONFIG_USE_middleware_multicore_rpmsg_lite AND CONFIG_USE_middleware_multicore_rpmsg_lite_freertos AND CONFIG_USE_middleware_multicore_mcmgr_lpc55s69 AND (CONFIG_BOARD STREQUAL lpcxpresso55s69) AND CONFIG_USE_middleware_multicore_rpmsg_lite_lpcxpresso55s69_freertos)
 
-add_config_file(${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application/rpmsg_config.h "" middleware_multicore_rpmsg_lite_freertos_config_imx7ulp_m4)
+add_config_file(${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application/rpmsg_config.h "" middleware_multicore_rpmsg_lite_freertos_config_lpcxpresso55s69)
 
 target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
   ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application
@@ -2143,127 +1525,7 @@ target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
 
 else()
 
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_freertos_config_imx7ulp_m4 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_evkmimxrt595_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_evkmimxrt595_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_evkmimxrt595_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimxrt595))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imxrt500_m33/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imxrt500_m33
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_evkmimxrt595_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_evkmimxrt595_fusionf1_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_evkmimxrt595_fusionf1_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_evkmimxrt595_fusionf1_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimxrt595))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imxrt500_fusionf1/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imxrt500_fusionf1
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_evkmimxrt595_fusionf1_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_evkmimxrt595_freertos)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_evkmimxrt595_freertos true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_evkmimxrt595_freertos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimxrt595) AND CONFIG_USE_middleware_freertos-kernel AND CONFIG_USE_middleware_freertos-kernel_heap_4)
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imxrt500_m33/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imxrt500_m33
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_evkmimxrt595_freertos dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mp_m7_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mp_m7_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_imx8mp_m7_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimx8mp))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imx8mp_m7/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imx8mp_m7
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_imx8mp_m7_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mp_m7_freertos)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_imx8mp_m7_freertos true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_imx8mp_m7_freertos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL evkmimx8mp) AND CONFIG_USE_middleware_freertos-kernel AND CONFIG_USE_middleware_freertos-kernel_heap_4)
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/imx8mp_m7/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/imx8mp_m7
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_imx8mp_m7_freertos dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
+message(SEND_ERROR "middleware_multicore_rpmsg_lite_freertos_config_lpcxpresso55s69 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
 
 endif()
 

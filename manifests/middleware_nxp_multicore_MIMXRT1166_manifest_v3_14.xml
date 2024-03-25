@@ -10,7 +10,7 @@
     <definition extID="platform.drivers.mu.MIMXRT1166"/>
     <definition extID="middleware.freertos-kernel.heap_4.MIMXRT1166"/>
   </externalDefinitions>
-  <ksdk id="MCUXpressoSDK2150_middleware_nxp_multicore_MIMXRT1166_manifest_v3_14" name="MCUXpressoSDK2150_middleware_nxp_multicore_MIMXRT1166_manifest_v3_14" version="2.15.0" revision="2.15.0"/>
+  <ksdk id="MCUXpressoSDK215100_middleware_nxp_multicore_MIMXRT1166_manifest_v3_14" name="MCUXpressoSDK215100_middleware_nxp_multicore_MIMXRT1166_manifest_v3_14" version="2.15.100" revision="2.15.100"/>
   <components>
     <component id="middleware.multicore.MIMXRT1166" name="multicore middleware" brief="Multicore SDK" version="2.15.0" full_name="Multicore Software Development Kit" category="Multicore/MulticoreSDK" user_visible="false" type="middleware" package_base_path=".././" project_base_path="multicore">
       <dependencies>
