@@ -1,99 +1,6 @@
 include_guard(GLOBAL)
 
 
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(CONFIG_USE_middleware_baremetal)
-  target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-      ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/environment/rpmsg_env_bm.c
-  )
-endif()
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/environment/bm
-)
-
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_freertos)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_freertos true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_freertos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(CONFIG_USE_middleware_freertos-kernel)
-  target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-      ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/environment/rpmsg_env_freertos.c
-      ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/rpmsg_queue.c
-  )
-endif()
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/environment/freertos
-)
-
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_xos)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_xos true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_xos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/environment/rpmsg_env_xos.c
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/rpmsg_queue.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/environment/xos
-)
-
-if(CONFIG_USE_COMPONENT_CONFIGURATION)
-  message("===>Import configuration from ${CMAKE_CURRENT_LIST_FILE}")
-
-  target_compile_definitions(${MCUX_SDK_PROJECT_NAME} PUBLIC
-    -DFSL_RTOS_XOS=1
-  )
-
-endif()
-
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_azurertos)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_azurertos true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_azurertos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/environment/rpmsg_env_threadx.c
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/rpmsg_queue.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/environment/threadx
-)
-
-if(CONFIG_USE_COMPONENT_CONFIGURATION)
-  message("===>Import configuration from ${CMAKE_CURRENT_LIST_FILE}")
-
-  target_compile_definitions(${MCUX_SDK_PROJECT_NAME} PUBLIC
-    -DFSL_RTOS_THREADX=1
-  )
-
-endif()
-
-
-endif()
-
-
 if (CONFIG_USE_middleware_multicore)
 # Add set(CONFIG_USE_middleware_multicore true) in config.cmake to use this component
 
@@ -103,184 +10,12 @@ message("middleware_multicore component is included from ${CMAKE_CURRENT_LIST_FI
 endif()
 
 
-if (CONFIG_USE_middleware_multicore_rpmsg_lite)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL MCXN946 OR CONFIG_DEVICE_ID STREQUAL MCXN947 OR CONFIG_DEVICE_ID STREQUAL MCXN546 OR CONFIG_DEVICE_ID STREQUAL MCXN547) OR (CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947)) AND (CONFIG_USE_middleware_multicore_rpmsg_lite_bm OR CONFIG_USE_middleware_multicore_rpmsg_lite_freertos OR CONFIG_USE_middleware_multicore_rpmsg_lite_xos OR CONFIG_USE_middleware_multicore_rpmsg_lite_azurertos))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/common/llist.c
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/rpmsg_lite.c
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/rpmsg_ns.c
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/virtio/virtqueue.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_mcxnx4x_bm)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_mcxnx4x_bm true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_mcxnx4x_bm component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/mcxnx4x/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/mcxnx4x
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_mcxnx4x_bm dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_mcxnx4x_freertos)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_mcxnx4x_freertos true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_mcxnx4x_freertos component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if((CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947) AND CONFIG_USE_middleware_freertos-kernel AND CONFIG_USE_middleware_freertos-kernel_heap_4)
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/rpmsg_lite/porting/platform/mcxnx4x/rpmsg_platform.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/lib/include/platform/mcxnx4x
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_mcxnx4x_freertos dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_bm_config_mcxnx4x)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_bm_config_mcxnx4x true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_bm_config_mcxnx4x component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(CONFIG_USE_middleware_multicore_rpmsg_lite AND CONFIG_USE_middleware_multicore_rpmsg_lite_bm AND CONFIG_USE_middleware_multicore_mcmgr_mcxnx4x AND (CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947) AND CONFIG_USE_middleware_multicore_rpmsg_lite_mcxnx4x_bm)
-
-add_config_file(${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application/rpmsg_config.h "" middleware_multicore_rpmsg_lite_bm_config_mcxnx4x)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_bm_config_mcxnx4x dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_rpmsg_lite_freertos_config_mcxnx4x)
-# Add set(CONFIG_USE_middleware_multicore_rpmsg_lite_freertos_config_mcxnx4x true) in config.cmake to use this component
-
-message("middleware_multicore_rpmsg_lite_freertos_config_mcxnx4x component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(CONFIG_USE_middleware_multicore_rpmsg_lite AND CONFIG_USE_middleware_multicore_rpmsg_lite_freertos AND CONFIG_USE_middleware_multicore_mcmgr_mcxnx4x AND (CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947) AND CONFIG_USE_middleware_multicore_rpmsg_lite_mcxnx4x_freertos)
-
-add_config_file(${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application/rpmsg_config.h "" middleware_multicore_rpmsg_lite_freertos_config_mcxnx4x)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./rpmsg_lite/template_application
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_rpmsg_lite_freertos_config_mcxnx4x dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_mcmgr)
-# Add set(CONFIG_USE_middleware_multicore_mcmgr true) in config.cmake to use this component
-
-message("middleware_multicore_mcmgr component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL MCXN946 OR CONFIG_DEVICE_ID STREQUAL MCXN947 OR CONFIG_DEVICE_ID STREQUAL MCXN546 OR CONFIG_DEVICE_ID STREQUAL MCXN547) OR (CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947)))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./mcmgr/src/mcmgr.c
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./mcmgr/src
-)
-
-if(CONFIG_USE_COMPONENT_CONFIGURATION)
-  message("===>Import configuration from ${CMAKE_CURRENT_LIST_FILE}")
-
-  target_compile_definitions(${MCUX_SDK_PROJECT_NAME} PUBLIC
-    -DMULTICORE_APP=1
-  )
-
-endif()
-
-else()
-
-message(SEND_ERROR "middleware_multicore_mcmgr dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_mcmgr_mcxnx4x)
-# Add set(CONFIG_USE_middleware_multicore_mcmgr_mcxnx4x true) in config.cmake to use this component
-
-message("middleware_multicore_mcmgr_mcxnx4x component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(CONFIG_USE_middleware_multicore_mcmgr AND CONFIG_USE_driver_mailbox AND (CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./mcmgr/src/mcmgr_internal_core_api_mcxnx4x.c
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_mcmgr_mcxnx4x dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
 if (CONFIG_USE_middleware_multicore_erpc_common)
 # Add set(CONFIG_USE_middleware_multicore_erpc_common true) in config.cmake to use this component
 
 message("middleware_multicore_erpc_common component is included from ${CMAKE_CURRENT_LIST_FILE}.")
 
-if(((CONFIG_DEVICE_ID STREQUAL MCXN946 OR CONFIG_DEVICE_ID STREQUAL MCXN947 OR CONFIG_DEVICE_ID STREQUAL MCXN546 OR CONFIG_DEVICE_ID STREQUAL MCXN547) OR (CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947)))
+if(((CONFIG_DEVICE_ID STREQUAL MCXN236) OR (CONFIG_BOARD STREQUAL frdmmcxn236)))
 
 target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}/./erpc/erpc_c/infra/erpc_basic_codec.cpp
@@ -1085,7 +820,7 @@ if (CONFIG_USE_middleware_multicore_erpc)
 
 message("middleware_multicore_erpc component is included from ${CMAKE_CURRENT_LIST_FILE}.")
 
-if(((CONFIG_DEVICE_ID STREQUAL MCXN946 OR CONFIG_DEVICE_ID STREQUAL MCXN947 OR CONFIG_DEVICE_ID STREQUAL MCXN546 OR CONFIG_DEVICE_ID STREQUAL MCXN547) OR (CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947)))
+if(((CONFIG_DEVICE_ID STREQUAL MCXN236) OR (CONFIG_BOARD STREQUAL frdmmcxn236)))
 
 else()
 
@@ -1101,7 +836,7 @@ if (CONFIG_USE_middleware_multicore_erpc_common_multiprocessor)
 
 message("middleware_multicore_erpc_common_multiprocessor component is included from ${CMAKE_CURRENT_LIST_FILE}.")
 
-if(((CONFIG_DEVICE_ID STREQUAL MCXN947 OR CONFIG_DEVICE_ID STREQUAL MCXN547) OR (CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947)))
+if(((CONFIG_DEVICE_ID STREQUAL MCXN236) OR (CONFIG_BOARD STREQUAL frdmmcxn236)))
 
 target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_error_handler.cpp
@@ -1125,7 +860,7 @@ if (CONFIG_USE_middleware_multicore_erpc_common_multiprocessor_matrix_multiply_c
 
 message("middleware_multicore_erpc_common_multiprocessor_matrix_multiply_client component is included from ${CMAKE_CURRENT_LIST_FILE}.")
 
-if(((CONFIG_DEVICE_ID STREQUAL MCXN947 OR CONFIG_DEVICE_ID STREQUAL MCXN547) OR (CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947)))
+if(((CONFIG_DEVICE_ID STREQUAL MCXN236) OR (CONFIG_BOARD STREQUAL frdmmcxn236)))
 
 target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_client.cpp
@@ -1151,7 +886,7 @@ if (CONFIG_USE_middleware_multicore_erpc_common_multiprocessor_matrix_multiply_s
 
 message("middleware_multicore_erpc_common_multiprocessor_matrix_multiply_server component is included from ${CMAKE_CURRENT_LIST_FILE}.")
 
-if(((CONFIG_DEVICE_ID STREQUAL MCXN947 OR CONFIG_DEVICE_ID STREQUAL MCXN547) OR (CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947)))
+if(((CONFIG_DEVICE_ID STREQUAL MCXN236) OR (CONFIG_BOARD STREQUAL frdmmcxn236)))
 
 target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}/./example/multiprocessor_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_server.cpp
@@ -1166,140 +901,6 @@ target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
 else()
 
 message(SEND_ERROR "middleware_multicore_erpc_common_multiprocessor_matrix_multiply_server dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_erpc_common_multicore)
-# Add set(CONFIG_USE_middleware_multicore_erpc_common_multicore true) in config.cmake to use this component
-
-message("middleware_multicore_erpc_common_multicore component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL MCXN947 OR CONFIG_DEVICE_ID STREQUAL MCXN547) OR (CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947)))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_error_handler.cpp
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_erpc_common_multicore dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_erpc_common_multicore_matrix_multiply_client)
-# Add set(CONFIG_USE_middleware_multicore_erpc_common_multicore_matrix_multiply_client true) in config.cmake to use this component
-
-message("middleware_multicore_erpc_common_multicore_matrix_multiply_client component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL MCXN947 OR CONFIG_DEVICE_ID STREQUAL MCXN547) OR (CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947)))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_client.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_interface.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/c_erpc_matrix_multiply_client.cpp
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_erpc_common_multicore_matrix_multiply_client dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_erpc_common_multicore_matrix_multiply_server)
-# Add set(CONFIG_USE_middleware_multicore_erpc_common_multicore_matrix_multiply_server true) in config.cmake to use this component
-
-message("middleware_multicore_erpc_common_multicore_matrix_multiply_server component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL MCXN947 OR CONFIG_DEVICE_ID STREQUAL MCXN547) OR (CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947)))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_server.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/erpc_matrix_multiply_interface.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service/c_erpc_matrix_multiply_server.cpp
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_matrix_multiply/service
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_erpc_common_multicore_matrix_multiply_server dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_erpc_common_two_way_rpc_core0)
-# Add set(CONFIG_USE_middleware_multicore_erpc_common_two_way_rpc_core0 true) in config.cmake to use this component
-
-message("middleware_multicore_erpc_common_two_way_rpc_core0 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL MCXN947 OR CONFIG_DEVICE_ID STREQUAL MCXN547) OR (CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947)))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core0Interface_client.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/c_erpc_two_way_rpc_Core0Interface_client.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core0Interface_interface.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core1Interface_server.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/c_erpc_two_way_rpc_Core1Interface_server.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core1Interface_interface.cpp
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_erpc_common_two_way_rpc_core0 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
-
-endif()
-
-endif()
-
-
-if (CONFIG_USE_middleware_multicore_erpc_common_two_way_rpc_core1)
-# Add set(CONFIG_USE_middleware_multicore_erpc_common_two_way_rpc_core1 true) in config.cmake to use this component
-
-message("middleware_multicore_erpc_common_two_way_rpc_core1 component is included from ${CMAKE_CURRENT_LIST_FILE}.")
-
-if(((CONFIG_DEVICE_ID STREQUAL MCXN947 OR CONFIG_DEVICE_ID STREQUAL MCXN547) OR (CONFIG_BOARD STREQUAL mcxn9xxevk OR CONFIG_BOARD STREQUAL mcxn5xxevk OR CONFIG_BOARD STREQUAL frdmmcxn947)))
-
-target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core1Interface_client.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/c_erpc_two_way_rpc_Core1Interface_client.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core1Interface_interface.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core0Interface_server.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/c_erpc_two_way_rpc_Core0Interface_server.cpp
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service/erpc_two_way_rpc_Core0Interface_interface.cpp
-)
-
-target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
-  ${CMAKE_CURRENT_LIST_DIR}/./example/multicore_examples/erpc_common/erpc_two_way_rpc/service
-)
-
-else()
-
-message(SEND_ERROR "middleware_multicore_erpc_common_two_way_rpc_core1 dependency does not meet, please check ${CMAKE_CURRENT_LIST_FILE}.")
 
 endif()
 
