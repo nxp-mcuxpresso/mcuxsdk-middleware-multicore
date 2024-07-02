@@ -9,9 +9,9 @@
     <definition extID="evkmimxrt595"/>
     <definition extID="middleware.freertos-kernel.heap_4.MIMXRT595S"/>
   </externalDefinitions>
-  <ksdk id="MCUXpressoSDK2150_middleware_nxp_multicore_MIMXRT595S_manifest_v3_14" name="MCUXpressoSDK2150_middleware_nxp_multicore_MIMXRT595S_manifest_v3_14" version="2.15.0" revision="2.15.0"/>
+  <ksdk id="MCUXpressoSDK216000_middleware_nxp_multicore_MIMXRT595S_manifest_v3_14" name="MCUXpressoSDK216000_middleware_nxp_multicore_MIMXRT595S_manifest_v3_14" version="2.16.000" revision="2.16.000"/>
   <components>
-    <component id="middleware.multicore.MIMXRT595S" name="multicore middleware" brief="Multicore SDK" version="2.15.0" full_name="Multicore Software Development Kit" category="Multicore/MulticoreSDK" user_visible="false" type="middleware" package_base_path=".././" project_base_path="multicore">
+    <component id="middleware.multicore.MIMXRT595S" name="multicore middleware" brief="Multicore SDK" version="2.16.0" full_name="Multicore Software Development Kit" category="Multicore/MulticoreSDK" user_visible="false" type="middleware" package_base_path=".././" project_base_path="multicore">
       <dependencies>
         <device_dependency value="MIMXRT595S"/>
       </dependencies>
@@ -23,7 +23,7 @@
         <files mask="middleware_multicore.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.bm.MIMXRT595S" name="rpmsg_lite" brief="RPMsg-Lite BM environment sources" version="5.1.1" full_name="RPMsg-Lite baremetal environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.bm.MIMXRT595S" name="rpmsg_lite" brief="RPMsg-Lite BM environment sources" version="5.1.2" full_name="RPMsg-Lite baremetal environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>
         <device_dependency value="MIMXRT595S"/>
       </dependencies>
@@ -40,7 +40,7 @@
         <include_path relative_path="./rpmsg_lite/lib/include/environment/bm" project_relative_path="include/environment/bm" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.freertos.MIMXRT595S" name="rpmsg_lite" brief="RPMsg-Lite FreeRTOS environment sources" version="5.1.1" full_name="RPMsg-Lite FreeRTOS environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.freertos.MIMXRT595S" name="rpmsg_lite" brief="RPMsg-Lite FreeRTOS environment sources" version="5.1.2" full_name="RPMsg-Lite FreeRTOS environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>
         <device_dependency value="MIMXRT595S"/>
       </dependencies>
@@ -63,7 +63,7 @@
         <include_path relative_path="./rpmsg_lite/lib/include/environment/freertos" project_relative_path="include/environment/freertos" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.xos.MIMXRT595S" name="rpmsg_lite xos" brief="RPMsg-Lite XOS environment layer sources" version="1.0.0" full_name="RPMsg-Lite XOS environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.xos.MIMXRT595S" name="rpmsg_lite xos" brief="RPMsg-Lite XOS environment layer sources" version="5.1.2" full_name="RPMsg-Lite XOS environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <defines>
         <define name="FSL_RTOS_XOS" value="1"/>
       </defines>
@@ -89,7 +89,7 @@
         <include_path relative_path="./rpmsg_lite/lib/include/environment/xos" project_relative_path="include/environment/xos" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.azurertos.MIMXRT595S" name="rpmsg_lite" brief="RPMsg-Lite Azure RTOS environment sources" version="5.1.1" full_name="RPMsg-Lite Azure RTOS environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.azurertos.MIMXRT595S" name="rpmsg_lite" brief="RPMsg-Lite Azure RTOS environment sources" version="5.1.2" full_name="RPMsg-Lite Azure RTOS environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <defines>
         <define name="FSL_RTOS_THREADX" value="1"/>
       </defines>
@@ -115,7 +115,7 @@
         <include_path relative_path="./rpmsg_lite/lib/include/environment/threadx" project_relative_path="include/environment/threadx" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.evkmimxrt595_bm.MIMXRT595S" name="rpmsg_lite_evkmimxrt595_bm" brief="RPMsg-Lite for evkmimxrt595 baremetal application" version="5.1.1" full_name="Remote Procedure Messaging Lite porting layer for evkmimxrt595 board" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.evkmimxrt595_bm.MIMXRT595S" name="rpmsg_lite_evkmimxrt595_bm" brief="RPMsg-Lite for evkmimxrt595 baremetal application" version="5.1.2" full_name="Remote Procedure Messaging Lite porting layer for evkmimxrt595 board" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>
         <all>
           <board_dependency value="evkmimxrt595"/>
@@ -135,7 +135,7 @@
         <include_path relative_path="./rpmsg_lite/lib/include/platform/imxrt500_m33" project_relative_path="include/platform/imxrt500_m33" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.evkmimxrt595_fusionf1_bm.MIMXRT595S" name="rpmsg_lite_evkmimxrt595_fusionf1_bm" brief="RPMsg-Lite for evkmimxrt595 baremetal application" version="5.1.1" full_name="Remote Procedure Messaging Lite porting layer for evkmimxrt595 board" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.evkmimxrt595_fusionf1_bm.MIMXRT595S" name="rpmsg_lite_evkmimxrt595_fusionf1_bm" brief="RPMsg-Lite for evkmimxrt595 baremetal application" version="5.1.2" full_name="Remote Procedure Messaging Lite porting layer for evkmimxrt595 board" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>
         <all>
           <board_dependency value="evkmimxrt595"/>
@@ -155,7 +155,7 @@
         <include_path relative_path="./rpmsg_lite/lib/include/platform/imxrt500_fusionf1" project_relative_path="include/platform/imxrt500_fusionf1" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.evkmimxrt595_freertos.MIMXRT595S" name="rpmsg_lite_evkmimxrt595_freertos" brief="RPMsg-Lite for evkmimxrt595 FreeRTOS application" version="5.1.1" full_name="Remote Procedure Messaging Lite porting layer for evkmimxrt595 board" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.evkmimxrt595_freertos.MIMXRT595S" name="rpmsg_lite_evkmimxrt595_freertos" brief="RPMsg-Lite for evkmimxrt595 FreeRTOS application" version="5.1.2" full_name="Remote Procedure Messaging Lite porting layer for evkmimxrt595 board" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>
         <all>
           <component_dependency value="middleware.freertos-kernel.MIMXRT595S"/>
@@ -177,7 +177,99 @@
         <include_path relative_path="./rpmsg_lite/lib/include/platform/imxrt500_m33" project_relative_path="include/platform/imxrt500_m33" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.MIMXRT595S" name="rpmsg_lite" brief="RPMsg-Lite" version="5.1.1" full_name="Remote Procedure Messaging Lite library" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.zephyr.MIMXRT595S" name="rpmsg_lite zephyr" brief="RPMsg-Lite Zephyr environment sources" version="5.1.2" full_name="RPMsg-Lite Zephyr environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+      <dependencies>
+        <all>
+          <component_dependency value="middleware.multicore.rpmsg_lite.MIMXRT595S"/>
+          <device_dependency value="MIMXRT595S"/>
+        </all>
+      </dependencies>
+      <source relative_path="./rpmsg_lite/lib/rpmsg_lite/porting/environment" project_relative_path="rpmsg_lite/porting/environment" type="src">
+        <files mask="rpmsg_env_zephyr.c"/>
+      </source>
+      <source relative_path="./rpmsg_lite/lib/include" project_relative_path="include" type="c_include">
+        <files mask="rpmsg_queue.h"/>
+      </source>
+      <source relative_path="./rpmsg_lite/lib/rpmsg_lite" project_relative_path="rpmsg_lite" type="src">
+        <files mask="rpmsg_queue.c"/>
+      </source>
+      <source relative_path="./rpmsg_lite/lib/include/environment/zephyr" project_relative_path="include/environment/zephyr" type="c_include">
+        <files mask="rpmsg_env_specific.h"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr" project_relative_path="rpmsg_lite/zephyr" type="doc">
+        <files mask="CMakeLists.txt"/>
+        <files mask="README.md"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr" project_relative_path="rpmsg_lite/zephyr" type="other">
+        <files mask="module.yml"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr" project_relative_path="zephyr" type="other">
+        <files mask="Kconfig" hidden="true"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong" project_relative_path="rpmsg_lite/zephyr/samples/rpmsglite_pingpong" type="doc">
+        <files mask="CMakeLists.txt"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong" project_relative_path="rpmsg_lite/zephyr/samples/rpmsglite_pingpong" type="other">
+        <files mask="Kconfig.sysbuild"/>
+        <files mask="README.rst"/>
+        <files mask="prj.conf"/>
+        <files mask="sample.yaml"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong" project_relative_path="rpmsg_lite/zephyr/samples/rpmsglite_pingpong" type="c_include">
+        <files mask="common.h"/>
+        <files mask="rpmsg_config.h"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong" project_relative_path="rpmsg_lite/zephyr/samples/rpmsglite_pingpong" type="script">
+        <files mask="sysbuild.cmake"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong" project_relative_path="zephyr/samples/rpmsglite_pingpong" type="other">
+        <files mask="Kconfig" hidden="true"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong/boards" project_relative_path="zephyr/samples/rpmsglite_pingpong/boards" type="other">
+        <files mask="lpcxpresso54114_m4.conf" hidden="true"/>
+        <files mask="lpcxpresso54114_m4.overlay" hidden="true"/>
+        <files mask="lpcxpresso55s69_cpu0.conf" hidden="true"/>
+        <files mask="lpcxpresso55s69_cpu0.overlay" hidden="true"/>
+        <files mask="mimxrt1160_evk_cm7.conf" hidden="true"/>
+        <files mask="mimxrt1160_evk_cm7.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm7.conf" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm7.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm7.conf" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm7.overlay" hidden="true"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong/remote" project_relative_path="zephyr/samples/rpmsglite_pingpong/remote" type="doc">
+        <files mask="CMakeLists.txt" hidden="true"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong/remote" project_relative_path="zephyr/samples/rpmsglite_pingpong/remote" type="other">
+        <files mask="prj.conf" hidden="true"/>
+        <files mask="sample.yaml" hidden="true"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong/remote/boards" project_relative_path="zephyr/samples/rpmsglite_pingpong/remote/boards" type="other">
+        <files mask="lpcxpresso54114_m0.conf" hidden="true"/>
+        <files mask="lpcxpresso54114_m0.overlay" hidden="true"/>
+        <files mask="lpcxpresso55s69_cpu1.conf" hidden="true"/>
+        <files mask="lpcxpresso55s69_cpu1.overlay" hidden="true"/>
+        <files mask="mimxrt1160_evk_cm4.conf" hidden="true"/>
+        <files mask="mimxrt1160_evk_cm4.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm4.conf" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm4.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm4.conf" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm4.overlay" hidden="true"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong/remote/src" project_relative_path="zephyr/samples/rpmsglite_pingpong/remote/src" type="src">
+        <files mask="main.c" hidden="true"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong/src" project_relative_path="zephyr/samples/rpmsglite_pingpong/src" type="src">
+        <files mask="main.c" hidden="true"/>
+      </source>
+      <source toolchain="armgcc" relative_path="./" type="workspace">
+        <files mask="middleware_multicore_rpmsg_lite_zephyr.cmake" hidden="true"/>
+      </source>
+      <include_paths>
+        <include_path relative_path="./rpmsg_lite/lib/include/environment/zephyr" project_relative_path="include/environment/zephyr" type="c_include"/>
+      </include_paths>
+    </component>
+    <component id="middleware.multicore.rpmsg_lite.MIMXRT595S" name="rpmsg_lite" brief="RPMsg-Lite" version="5.1.2" full_name="Remote Procedure Messaging Lite library" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>
         <all>
           <any_of>

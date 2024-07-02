@@ -24,11 +24,11 @@ manifest:
     - name: rpmsg-lite.git
       path: multicore/rpmsg_lite
       url:  https://github.com/NXPmicro/rpmsg-lite.git
-      revision: v5.1.1
+      revision: v5.1.2
     - name: erpc.git
       path: multicore/erpc
       url:  https://github.com/EmbeddedRPC/erpc.git
-      revision: 1.12.0
+      revision: 1.13.0
 
   self:
     path: multicore

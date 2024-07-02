@@ -6,12 +6,13 @@
     <definition extID="armgcc"/>
     <definition extID="middleware.baremetal.MIMX8UD5"/>
     <definition extID="middleware.freertos-kernel.MIMX8UD5"/>
+    <definition extID="evkmimx8ulp"/>
     <definition extID="evk9mimx8ulp"/>
     <definition extID="middleware.freertos-kernel.heap_4.MIMX8UD5"/>
   </externalDefinitions>
-  <ksdk id="MCUXpressoSDK2150_middleware_nxp_multicore_MIMX8UD5_manifest_v3_14" name="MCUXpressoSDK2150_middleware_nxp_multicore_MIMX8UD5_manifest_v3_14" version="2.15.0" revision="2.15.0"/>
+  <ksdk id="MCUXpressoSDK216000_middleware_nxp_multicore_MIMX8UD5_manifest_v3_14" name="MCUXpressoSDK216000_middleware_nxp_multicore_MIMX8UD5_manifest_v3_14" version="2.16.000" revision="2.16.000"/>
   <components>
-    <component id="middleware.multicore.MIMX8UD5" name="multicore middleware" brief="Multicore SDK" version="2.15.0" full_name="Multicore Software Development Kit" category="Multicore/MulticoreSDK" user_visible="false" type="middleware" package_base_path=".././" project_base_path="multicore">
+    <component id="middleware.multicore.MIMX8UD5" name="multicore middleware" brief="Multicore SDK" version="2.16.0" full_name="Multicore Software Development Kit" category="Multicore/MulticoreSDK" user_visible="false" type="middleware" package_base_path=".././" project_base_path="multicore">
       <dependencies>
         <device_dependency value="MIMX8UD5xxx08"/>
       </dependencies>
@@ -40,7 +41,7 @@
         <files mask="middleware_multicore_remoteproc_loadscript.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.bm.MIMX8UD5" name="rpmsg_lite" brief="RPMsg-Lite BM environment sources" version="5.1.1" full_name="RPMsg-Lite baremetal environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.bm.MIMX8UD5" name="rpmsg_lite" brief="RPMsg-Lite BM environment sources" version="5.1.2" full_name="RPMsg-Lite baremetal environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>
         <device_dependency value="MIMX8UD5xxx08"/>
       </dependencies>
@@ -57,7 +58,7 @@
         <include_path relative_path="./rpmsg_lite/lib/include/environment/bm" project_relative_path="include/environment/bm" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.freertos.MIMX8UD5" name="rpmsg_lite" brief="RPMsg-Lite FreeRTOS environment sources" version="5.1.1" full_name="RPMsg-Lite FreeRTOS environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.freertos.MIMX8UD5" name="rpmsg_lite" brief="RPMsg-Lite FreeRTOS environment sources" version="5.1.2" full_name="RPMsg-Lite FreeRTOS environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>
         <device_dependency value="MIMX8UD5xxx08"/>
       </dependencies>
@@ -80,7 +81,7 @@
         <include_path relative_path="./rpmsg_lite/lib/include/environment/freertos" project_relative_path="include/environment/freertos" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.xos.MIMX8UD5" name="rpmsg_lite xos" brief="RPMsg-Lite XOS environment layer sources" version="1.0.0" full_name="RPMsg-Lite XOS environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.xos.MIMX8UD5" name="rpmsg_lite xos" brief="RPMsg-Lite XOS environment layer sources" version="5.1.2" full_name="RPMsg-Lite XOS environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <defines>
         <define name="FSL_RTOS_XOS" value="1"/>
       </defines>
@@ -106,7 +107,7 @@
         <include_path relative_path="./rpmsg_lite/lib/include/environment/xos" project_relative_path="include/environment/xos" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.azurertos.MIMX8UD5" name="rpmsg_lite" brief="RPMsg-Lite Azure RTOS environment sources" version="5.1.1" full_name="RPMsg-Lite Azure RTOS environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.azurertos.MIMX8UD5" name="rpmsg_lite" brief="RPMsg-Lite Azure RTOS environment sources" version="5.1.2" full_name="RPMsg-Lite Azure RTOS environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <defines>
         <define name="FSL_RTOS_THREADX" value="1"/>
       </defines>
@@ -132,7 +133,7 @@
         <include_path relative_path="./rpmsg_lite/lib/include/environment/threadx" project_relative_path="include/environment/threadx" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.common.MIMX8UD5" name="eRPC_common" brief="eRPC" version="1.12.0" full_name="Embedded Remote Procedure Call" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.common.MIMX8UD5" name="eRPC_common" brief="eRPC" version="1.13.0" full_name="Embedded Remote Procedure Call" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <device_dependency value="MIMX8UD5xxx08"/>
       </dependencies>
@@ -180,7 +181,7 @@
         <include_path relative_path="./erpc/erpc_c" project_relative_path="./" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_arbitrator.MIMX8UD5" name="eRPC_arbitrator" brief="eRPC_arbitrator" version="1.12.0" full_name="eRPC arbitrator" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_arbitrator.MIMX8UD5" name="eRPC_arbitrator" brief="eRPC_arbitrator" version="1.13.0" full_name="eRPC arbitrator" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -226,7 +227,7 @@
         <include_path relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_client.MIMX8UD5" name="eRPC_client" brief="eRPC_client" version="1.12.0" full_name="eRPC client" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_client.MIMX8UD5" name="eRPC_client" brief="eRPC_client" version="1.13.0" full_name="eRPC client" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -253,7 +254,7 @@
         <include_path relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_server.MIMX8UD5" name="eRPC_server" brief="eRPC_server" version="1.12.0" full_name="eRPC server" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_server.MIMX8UD5" name="eRPC_server" brief="eRPC_server" version="1.13.0" full_name="eRPC server" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -282,7 +283,7 @@
         <include_path relative_path="./erpc/erpc_c/setup" project_relative_path="setup" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_tty_rtos_remote_c_wrapper.MIMX8UD5" name="eRPC_rpmsg_tty_rtos_remote_c_wrapper" brief="eRPC_rpmsg_tty_rtos_remote_c_wrapper" version="1.12.0" full_name="eRPC RPMsg-Lite remote TTY RTOS C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_tty_rtos_remote_c_wrapper.MIMX8UD5" name="eRPC_rpmsg_tty_rtos_remote_c_wrapper" brief="eRPC_rpmsg_tty_rtos_remote_c_wrapper" version="1.13.0" full_name="eRPC RPMsg-Lite remote TTY RTOS C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -296,7 +297,7 @@
         <files mask="middleware_multicore_erpc_eRPC_rpmsg_tty_rtos_remote_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_mu_c_wrapper.MIMX8UD5" name="eRPC_mu_c_wrapper" brief="eRPC_mu_c_wrapper" version="1.12.0" full_name="eRPC Messaging Unit C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_mu_c_wrapper.MIMX8UD5" name="eRPC_mu_c_wrapper" brief="eRPC_mu_c_wrapper" version="1.13.0" full_name="eRPC Messaging Unit C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -310,7 +311,7 @@
         <files mask="middleware_multicore_erpc_eRPC_mu_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_master_c_wrapper.MIMX8UD5" name="eRPC_rpmsg_lite_master_c_wrapper" brief="eRPC_rpmsg_lite_master_c_wrapper" version="1.12.0" full_name="eRPC RPMsg-Lite master C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_master_c_wrapper.MIMX8UD5" name="eRPC_rpmsg_lite_master_c_wrapper" brief="eRPC_rpmsg_lite_master_c_wrapper" version="1.13.0" full_name="eRPC RPMsg-Lite master C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -324,7 +325,7 @@
         <files mask="middleware_multicore_erpc_eRPC_rpmsg_lite_master_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_remote_c_wrapper.MIMX8UD5" name="eRPC_rpmsg_lite_remote_c_wrapper" brief="eRPC_rpmsg_lite_remote_c_wrapper" version="1.12.0" full_name="eRPC RPMsg-Lite remote C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_remote_c_wrapper.MIMX8UD5" name="eRPC_rpmsg_lite_remote_c_wrapper" brief="eRPC_rpmsg_lite_remote_c_wrapper" version="1.13.0" full_name="eRPC RPMsg-Lite remote C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -338,7 +339,7 @@
         <files mask="middleware_multicore_erpc_eRPC_rpmsg_lite_remote_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_master_c_wrapper.MIMX8UD5" name="eRPC_rpmsg_lite_rtos_master_c_wrapper" brief="eRPC_rpmsg_lite_rtos_master_c_wrapper" version="1.12.0" full_name="eRPC RPMsg-Lite RTOS master C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_master_c_wrapper.MIMX8UD5" name="eRPC_rpmsg_lite_rtos_master_c_wrapper" brief="eRPC_rpmsg_lite_rtos_master_c_wrapper" version="1.13.0" full_name="eRPC RPMsg-Lite RTOS master C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -352,7 +353,7 @@
         <files mask="middleware_multicore_erpc_eRPC_rpmsg_lite_rtos_master_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_remote_c_wrapper.MIMX8UD5" name="eRPC_rpmsg_lite_rtos_remote_c_wrapper" brief="eRPC_rpmsg_lite_rtos_remote_c_wrapper" version="1.12.0" full_name="eRPC RPMsg-Lite RTOS remote C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_remote_c_wrapper.MIMX8UD5" name="eRPC_rpmsg_lite_rtos_remote_c_wrapper" brief="eRPC_rpmsg_lite_rtos_remote_c_wrapper" version="1.13.0" full_name="eRPC RPMsg-Lite RTOS remote C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -366,7 +367,7 @@
         <files mask="middleware_multicore_erpc_eRPC_rpmsg_lite_rtos_remote_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_dspi_master_c_wrapper.MIMX8UD5" name="eRPC_dspi_master_c_wrapper" brief="eRPC_dspi_master_c_wrapper" version="1.12.0" full_name="eRPC DSPI master C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_dspi_master_c_wrapper.MIMX8UD5" name="eRPC_dspi_master_c_wrapper" brief="eRPC_dspi_master_c_wrapper" version="1.13.0" full_name="eRPC DSPI master C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -380,7 +381,7 @@
         <files mask="middleware_multicore_erpc_eRPC_dspi_master_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_dspi_slave_c_wrapper.MIMX8UD5" name="eRPC_dspi_slave_c_wrapper" brief="eRPC_dspi_slave_c_wrapper" version="1.12.0" full_name="eRPC DSPI slave C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_dspi_slave_c_wrapper.MIMX8UD5" name="eRPC_dspi_slave_c_wrapper" brief="eRPC_dspi_slave_c_wrapper" version="1.13.0" full_name="eRPC DSPI slave C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -394,7 +395,7 @@
         <files mask="middleware_multicore_erpc_eRPC_dspi_slave_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_spi_master_c_wrapper.MIMX8UD5" name="eRPC_spi_master_c_wrapper" brief="eRPC_spi_master_c_wrapper" version="1.12.0" full_name="eRPC SPI master C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_spi_master_c_wrapper.MIMX8UD5" name="eRPC_spi_master_c_wrapper" brief="eRPC_spi_master_c_wrapper" version="1.13.0" full_name="eRPC SPI master C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -408,7 +409,7 @@
         <files mask="middleware_multicore_erpc_eRPC_spi_master_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_spi_slave_c_wrapper.MIMX8UD5" name="eRPC_spi_slave_c_wrapper" brief="eRPC_spi_slave_c_wrapper" version="1.12.0" full_name="eRPC SPI slave C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_spi_slave_c_wrapper.MIMX8UD5" name="eRPC_spi_slave_c_wrapper" brief="eRPC_spi_slave_c_wrapper" version="1.13.0" full_name="eRPC SPI slave C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -422,7 +423,7 @@
         <files mask="middleware_multicore_erpc_eRPC_spi_slave_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_lpspi_slave_c_wrapper.MIMX8UD5" name="eRPC_lpspi_slave_c_wrapper" brief="eRPC_lpspi_slave_c_wrapper" version="1.9.1" full_name="eRPC LPSPI slave C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_lpspi_slave_c_wrapper.MIMX8UD5" name="eRPC_lpspi_slave_c_wrapper" brief="eRPC_lpspi_slave_c_wrapper" version="1.13.0" full_name="eRPC LPSPI slave C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -436,7 +437,7 @@
         <files mask="middleware_multicore_erpc_eRPC_lpspi_slave_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_i2c_slave_c_wrapper.MIMX8UD5" name="eRPC_i2c_slave_c_wrapper" brief="eRPC_i2c_slave_c_wrapper" version="1.12.0" full_name="eRPC I2C slave C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_i2c_slave_c_wrapper.MIMX8UD5" name="eRPC_i2c_slave_c_wrapper" brief="eRPC_i2c_slave_c_wrapper" version="1.13.0" full_name="eRPC I2C slave C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -450,7 +451,7 @@
         <files mask="middleware_multicore_erpc_eRPC_i2c_slave_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_lpi2c_slave_c_wrapper.MIMX8UD5" name="eRPC_lpi2c_slave_c_wrapper" brief="eRPC_lpi2c_slave_c_wrapper" version="1.9.1" full_name="eRPC LPI2C slave C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_lpi2c_slave_c_wrapper.MIMX8UD5" name="eRPC_lpi2c_slave_c_wrapper" brief="eRPC_lpi2c_slave_c_wrapper" version="1.13.0" full_name="eRPC LPI2C slave C Wrapper" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -464,7 +465,7 @@
         <files mask="middleware_multicore_erpc_eRPC_lpi2c_slave_c_wrapper.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_mu_transport.MIMX8UD5" name="eRPC_mu_transport" brief="eRPC_mu_transport" version="1.12.0" full_name="eRPC MU transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_mu_transport.MIMX8UD5" name="eRPC_mu_transport" brief="eRPC_mu_transport" version="1.13.0" full_name="eRPC MU transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -487,7 +488,7 @@
         <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_mu_rtos_transport.MIMX8UD5" name="eRPC_mu_rtos_transport" brief="eRPC_mu_rtos_transport" version="1.12.0" full_name="eRPC MU RTOS transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_mu_rtos_transport.MIMX8UD5" name="eRPC_mu_rtos_transport" brief="eRPC_mu_rtos_transport" version="1.13.0" full_name="eRPC MU RTOS transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -517,7 +518,7 @@
         <include_path relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_transport.MIMX8UD5" name="eRPC_rpmsg_lite_transport" brief="eRPC_rpmsg_lite_transport" version="1.12.0" full_name="eRPC RPMsg-Lite transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_transport.MIMX8UD5" name="eRPC_rpmsg_lite_transport" brief="eRPC_rpmsg_lite_transport" version="1.13.0" full_name="eRPC RPMsg-Lite transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -545,7 +546,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_transport.MIMX8UD5" name="eRPC_rpmsg_lite_rtos_transport" brief="eRPC_rpmsg_lite_rtos_transport" version="1.12.0" full_name="eRPC RPMsg-Lite RTOS transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_lite_rtos_transport.MIMX8UD5" name="eRPC_rpmsg_lite_rtos_transport" brief="eRPC_rpmsg_lite_rtos_transport" version="1.13.0" full_name="eRPC RPMsg-Lite RTOS transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -569,7 +570,7 @@
         <include_path relative_path="./erpc/erpc_c/transports" project_relative_path="transports" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_rpmsg_tty_rtos_transport.MIMX8UD5" name="eRPC_rpmsg_tty_rtos_transport" brief="eRPC_rpmsg_tty_rtos_transport" version="1.12.0" full_name="eRPC RPMsg-Lite TTY RTOS transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_rpmsg_tty_rtos_transport.MIMX8UD5" name="eRPC_rpmsg_tty_rtos_transport" brief="eRPC_rpmsg_tty_rtos_transport" version="1.13.0" full_name="eRPC RPMsg-Lite TTY RTOS transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -607,7 +608,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_uart_cmsis_transport.MIMX8UD5" name="eRPC_uart_cmsis_transport" brief="eRPC_uart_cmsis_transport" version="1.12.0" full_name="eRPC UART CMSIS transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_uart_cmsis_transport.MIMX8UD5" name="eRPC_uart_cmsis_transport" brief="eRPC_uart_cmsis_transport" version="1.13.0" full_name="eRPC UART CMSIS transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -638,7 +639,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_dspi_master_transport.MIMX8UD5" name="eRPC_dspi_master_transport" brief="eRPC_dspi_master_transport" version="1.12.0" full_name="eRPC DSPI master transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_dspi_master_transport.MIMX8UD5" name="eRPC_dspi_master_transport" brief="eRPC_dspi_master_transport" version="1.13.0" full_name="eRPC DSPI master transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -668,7 +669,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_dspi_slave_transport.MIMX8UD5" name="eRPC_dspi_slave_transport" brief="eRPC_dspi_slave_transport" version="1.12.0" full_name="eRPC DSPI slave transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_dspi_slave_transport.MIMX8UD5" name="eRPC_dspi_slave_transport" brief="eRPC_dspi_slave_transport" version="1.13.0" full_name="eRPC DSPI slave transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -698,7 +699,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_spi_master_transport.MIMX8UD5" name="eRPC_spi_master_transport" brief="eRPC_spi_master_transport" version="1.12.0" full_name="eRPC SPI master transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_spi_master_transport.MIMX8UD5" name="eRPC_spi_master_transport" brief="eRPC_spi_master_transport" version="1.13.0" full_name="eRPC SPI master transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -728,7 +729,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_spi_slave_transport.MIMX8UD5" name="eRPC_spi_slave_transport" brief="eRPC_spi_slave_transport" version="1.12.0" full_name="eRPC SPI slave transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_spi_slave_transport.MIMX8UD5" name="eRPC_spi_slave_transport" brief="eRPC_spi_slave_transport" version="1.13.0" full_name="eRPC SPI slave transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -758,7 +759,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_lpspi_slave_transport.MIMX8UD5" name="eRPC_lpspi_slave_transport" brief="eRPC_lpspi_slave_transport" version="1.9.1" full_name="eRPC LPSPI slave transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_lpspi_slave_transport.MIMX8UD5" name="eRPC_lpspi_slave_transport" brief="eRPC_lpspi_slave_transport" version="1.13.0" full_name="eRPC LPSPI slave transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -788,7 +789,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_i2c_slave_transport.MIMX8UD5" name="eRPC_i2c_slave_transport" brief="eRPC_i2c_slave_transport" version="1.12.0" full_name="eRPC I2C slave transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_i2c_slave_transport.MIMX8UD5" name="eRPC_i2c_slave_transport" brief="eRPC_i2c_slave_transport" version="1.13.0" full_name="eRPC I2C slave transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -818,7 +819,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_lpi2c_slave_transport.MIMX8UD5" name="eRPC_lpi2c_slave_transport" brief="eRPC_lpi2c_slave_transport" version="1.9.1" full_name="eRPC LPI2C slave transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_lpi2c_slave_transport.MIMX8UD5" name="eRPC_lpi2c_slave_transport" brief="eRPC_lpi2c_slave_transport" version="1.13.0" full_name="eRPC LPI2C slave transport layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -848,7 +849,7 @@
         <include_path relative_path="./erpc/erpc_c/infra" project_relative_path="infra" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_port_freertos.MIMX8UD5" name="eRPC_port_freertos" brief="eRPC_port_freertos" version="1.12.0" full_name="eRPC FreeRTOS port layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_port_freertos.MIMX8UD5" name="eRPC_port_freertos" brief="eRPC_port_freertos" version="1.13.0" full_name="eRPC FreeRTOS port layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -873,7 +874,7 @@
         <include_path relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.eRPC_port_stdlib.MIMX8UD5" name="eRPC_port_stdlib" brief="eRPC_port_stdlib" version="1.12.0" full_name="eRPC stdlib port layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.eRPC_port_stdlib.MIMX8UD5" name="eRPC_port_stdlib" brief="eRPC_port_stdlib" version="1.13.0" full_name="eRPC stdlib port layer" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -894,7 +895,7 @@
         <include_path relative_path="./erpc/erpc_c/port" project_relative_path="port" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.erpc.doc.MIMX8UD5" name="eRPC_port_stdlib" brief="erpc_doc" version="1.12.0" full_name="eRPC doc" category="Multicore/Remote Procedure Call" user_visible="false" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.doc.MIMX8UD5" name="eRPC_documentation" brief="erpc_doc" version="1.13.0" full_name="eRPC doc" category="Multicore/Remote Procedure Call" user_visible="false" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <all>
           <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
@@ -925,7 +926,405 @@
         <files mask="middleware_multicore_erpc_doc.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.erpc.MIMX8UD5" name="eRPC" brief="eRPC" version="1.12.0" full_name="Embedded Remote Procedure Call" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
+    <component id="middleware.multicore.erpc.zephyr.MIMX8UD5" name="eRPC_zephyr_sources" brief="erpc_zephyr" version="1.13.0" full_name="eRPC Zephyr sources" category="Multicore/Remote Procedure Call" user_visible="false" type="middleware" package_base_path=".././" project_base_path="erpc">
+      <dependencies>
+        <all>
+          <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
+          <device_dependency value="MIMX8UD5xxx08"/>
+        </all>
+      </dependencies>
+      <source relative_path="./erpc/erpc_c/port" project_relative_path="erpc_c/port" type="src">
+        <files mask="erpc_port_zephyr.cpp" hidden="true"/>
+        <files mask="erpc_threading_zephyr.cpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/zephyr" project_relative_path="erpc/zephyr" type="doc">
+        <files mask="CMakeLists.txt"/>
+        <files mask="readme.md"/>
+      </source>
+      <source relative_path="./erpc/zephyr" project_relative_path="erpc/zephyr" type="other">
+        <files mask="module.yml"/>
+      </source>
+      <source relative_path="./erpc/zephyr" project_relative_path="zephyr" type="other">
+        <files mask="Kconfig" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox" project_relative_path="erpc/examples/zephyr/matrix_multiply_mbox" type="doc">
+        <files mask="CMakeLists.txt"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox" project_relative_path="erpc/examples/zephyr/matrix_multiply_mbox" type="other">
+        <files mask="Kconfig.sysbuild"/>
+        <files mask="README.rst"/>
+        <files mask="prj.conf"/>
+        <files mask="sample.yaml"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox" project_relative_path="erpc/examples/zephyr/matrix_multiply_mbox" type="c_include">
+        <files mask="erpc_config.h"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox" project_relative_path="erpc/examples/zephyr/matrix_multiply_mbox" type="script">
+        <files mask="sysbuild.cmake"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox" project_relative_path="zephyr/examples/matrix_multiply_mbox" type="other">
+        <files mask="Kconfig" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/boards" project_relative_path="zephyr/examples/matrix_multiply_mbox/boards" type="other">
+        <files mask="mimxrt1160_evk_cm7.conf" hidden="true"/>
+        <files mask="mimxrt1160_evk_cm7.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm7.conf" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm7.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm7.conf" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm7.overlay" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/remote" project_relative_path="zephyr/examples/matrix_multiply_mbox/remote" type="doc">
+        <files mask="CMakeLists.txt" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/remote" project_relative_path="zephyr/examples/matrix_multiply_mbox/remote" type="other">
+        <files mask="prj.conf" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/remote/boards" project_relative_path="zephyr/examples/matrix_multiply_mbox/remote/boards" type="other">
+        <files mask="mimxrt1160_evk_cm4.conf" hidden="true"/>
+        <files mask="mimxrt1160_evk_cm4.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm4.conf" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm4.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm4.conf" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm4.overlay" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/remote/src" project_relative_path="zephyr/examples/matrix_multiply_mbox/remote/src" type="src">
+        <files mask="erpc_error_handler.cpp" hidden="true"/>
+        <files mask="main.cpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/remote/src" project_relative_path="zephyr/examples/matrix_multiply_mbox/remote/src" type="c_include">
+        <files mask="erpc_error_handler.h" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/remote/src/service" project_relative_path="zephyr/examples/matrix_multiply_mbox/remote/src/service" type="src">
+        <files mask="c_erpc_matrix_multiply_server.cpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_interface.cpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_server.cpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/remote/src/service" project_relative_path="zephyr/examples/matrix_multiply_mbox/remote/src/service" type="c_include">
+        <files mask="c_erpc_matrix_multiply_server.h" hidden="true"/>
+        <files mask="erpc_matrix_multiply_common.h" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/remote/src/service" project_relative_path="zephyr/examples/matrix_multiply_mbox/remote/src/service" type="script">
+        <files mask="erpc_matrix_multiply.erpc" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/remote/src/service" project_relative_path="zephyr/examples/matrix_multiply_mbox/remote/src/service" type="cpp_include">
+        <files mask="erpc_matrix_multiply_common.hpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_interface.hpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_server.hpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/src" project_relative_path="zephyr/examples/matrix_multiply_mbox/src" type="src">
+        <files mask="erpc_error_handler.cpp" hidden="true"/>
+        <files mask="main.cpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/src" project_relative_path="zephyr/examples/matrix_multiply_mbox/src" type="c_include">
+        <files mask="erpc_error_handler.h" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/src/service" project_relative_path="zephyr/examples/matrix_multiply_mbox/src/service" type="src">
+        <files mask="c_erpc_matrix_multiply_client.cpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_client.cpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_interface.cpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/src/service" project_relative_path="zephyr/examples/matrix_multiply_mbox/src/service" type="c_include">
+        <files mask="c_erpc_matrix_multiply_client.h" hidden="true"/>
+        <files mask="erpc_matrix_multiply_common.h" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/src/service" project_relative_path="zephyr/examples/matrix_multiply_mbox/src/service" type="script">
+        <files mask="erpc_matrix_multiply.erpc" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_mbox/src/service" project_relative_path="zephyr/examples/matrix_multiply_mbox/src/service" type="cpp_include">
+        <files mask="erpc_matrix_multiply_client.hpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_common.hpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_interface.hpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite" project_relative_path="erpc/examples/zephyr/matrix_multiply_rpmsglite" type="doc">
+        <files mask="CMakeLists.txt"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite" project_relative_path="erpc/examples/zephyr/matrix_multiply_rpmsglite" type="other">
+        <files mask="Kconfig.sysbuild"/>
+        <files mask="README.rst"/>
+        <files mask="prj.conf"/>
+        <files mask="sample.yaml"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite" project_relative_path="erpc/examples/zephyr/matrix_multiply_rpmsglite" type="c_include">
+        <files mask="erpc_config.h"/>
+        <files mask="rpmsg_config.h"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite" project_relative_path="erpc/examples/zephyr/matrix_multiply_rpmsglite" type="script">
+        <files mask="sysbuild.cmake"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite" type="other">
+        <files mask="Kconfig" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/boards" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/boards" type="other">
+        <files mask="lpcxpresso54114_m4.conf" hidden="true"/>
+        <files mask="lpcxpresso54114_m4.overlay" hidden="true"/>
+        <files mask="lpcxpresso55s69_cpu0.conf" hidden="true"/>
+        <files mask="lpcxpresso55s69_cpu0.overlay" hidden="true"/>
+        <files mask="mimxrt1160_evk_cm7.conf" hidden="true"/>
+        <files mask="mimxrt1160_evk_cm7.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm7.conf" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm7.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm7.conf" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm7.overlay" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/remote" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/remote" type="doc">
+        <files mask="CMakeLists.txt" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/remote" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/remote" type="other">
+        <files mask="prj.conf" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/remote/boards" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/remote/boards" type="other">
+        <files mask="lpcxpresso54114_m0.conf" hidden="true"/>
+        <files mask="lpcxpresso54114_m0.overlay" hidden="true"/>
+        <files mask="lpcxpresso55s69_cpu1.conf" hidden="true"/>
+        <files mask="lpcxpresso55s69_cpu1.overlay" hidden="true"/>
+        <files mask="mimxrt1160_evk_cm4.conf" hidden="true"/>
+        <files mask="mimxrt1160_evk_cm4.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm4.conf" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm4.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm4.conf" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm4.overlay" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/remote/src" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/remote/src" type="src">
+        <files mask="erpc_error_handler.cpp" hidden="true"/>
+        <files mask="main.cpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/remote/src" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/remote/src" type="c_include">
+        <files mask="erpc_error_handler.h" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/remote/src/service" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/remote/src/service" type="src">
+        <files mask="c_erpc_matrix_multiply_server.cpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_interface.cpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_server.cpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/remote/src/service" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/remote/src/service" type="c_include">
+        <files mask="c_erpc_matrix_multiply_server.h" hidden="true"/>
+        <files mask="erpc_matrix_multiply_common.h" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/remote/src/service" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/remote/src/service" type="script">
+        <files mask="erpc_matrix_multiply.erpc" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/remote/src/service" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/remote/src/service" type="cpp_include">
+        <files mask="erpc_matrix_multiply_common.hpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_interface.hpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_server.hpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/src" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/src" type="src">
+        <files mask="erpc_error_handler.cpp" hidden="true"/>
+        <files mask="main.cpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/src" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/src" type="c_include">
+        <files mask="erpc_error_handler.h" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/src/service" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/src/service" type="src">
+        <files mask="c_erpc_matrix_multiply_client.cpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_client.cpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_interface.cpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/src/service" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/src/service" type="c_include">
+        <files mask="c_erpc_matrix_multiply_client.h" hidden="true"/>
+        <files mask="erpc_matrix_multiply_common.h" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/src/service" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/src/service" type="script">
+        <files mask="erpc_matrix_multiply.erpc" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_rpmsglite/src/service" project_relative_path="zephyr/examples/matrix_multiply_rpmsglite/src/service" type="cpp_include">
+        <files mask="erpc_matrix_multiply_client.hpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_common.hpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_interface.hpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_tcp" project_relative_path="zephyr/examples/matrix_multiply_tcp" type="doc">
+        <files mask="CMakeLists.txt" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_tcp" project_relative_path="zephyr/examples/matrix_multiply_tcp" type="other">
+        <files mask="README.rst" hidden="true"/>
+        <files mask="prj.conf" hidden="true"/>
+        <files mask="sample.yaml" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_tcp/src" project_relative_path="zephyr/examples/matrix_multiply_tcp/src" type="c_include">
+        <files mask="erpc_config.h" hidden="true"/>
+        <files mask="erpc_error_handler.h" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_tcp/src" project_relative_path="zephyr/examples/matrix_multiply_tcp/src" type="src">
+        <files mask="erpc_error_handler.cpp" hidden="true"/>
+        <files mask="main.cpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_tcp/src/service" project_relative_path="zephyr/examples/matrix_multiply_tcp/src/service" type="src">
+        <files mask="c_erpc_matrix_multiply_server.cpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_interface.cpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_server.cpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_tcp/src/service" project_relative_path="zephyr/examples/matrix_multiply_tcp/src/service" type="c_include">
+        <files mask="c_erpc_matrix_multiply_server.h" hidden="true"/>
+        <files mask="erpc_matrix_multiply_common.h" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_tcp/src/service" project_relative_path="zephyr/examples/matrix_multiply_tcp/src/service" type="script">
+        <files mask="erpc_matrix_multiply.erpc" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_tcp/src/service" project_relative_path="zephyr/examples/matrix_multiply_tcp/src/service" type="cpp_include">
+        <files mask="erpc_matrix_multiply_common.hpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_interface.hpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_server.hpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_uart" project_relative_path="zephyr/examples/matrix_multiply_uart" type="doc">
+        <files mask="CMakeLists.txt" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_uart" project_relative_path="zephyr/examples/matrix_multiply_uart" type="other">
+        <files mask="README.rst" hidden="true"/>
+        <files mask="prj.conf" hidden="true"/>
+        <files mask="sample.yaml" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_uart/src" project_relative_path="zephyr/examples/matrix_multiply_uart/src" type="c_include">
+        <files mask="erpc_config.h" hidden="true"/>
+        <files mask="erpc_error_handler.h" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_uart/src" project_relative_path="zephyr/examples/matrix_multiply_uart/src" type="src">
+        <files mask="erpc_error_handler.cpp" hidden="true"/>
+        <files mask="main.cpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_uart/src/service" project_relative_path="zephyr/examples/matrix_multiply_uart/src/service" type="src">
+        <files mask="c_erpc_matrix_multiply_server.cpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_interface.cpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_server.cpp" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_uart/src/service" project_relative_path="zephyr/examples/matrix_multiply_uart/src/service" type="c_include">
+        <files mask="c_erpc_matrix_multiply_server.h" hidden="true"/>
+        <files mask="erpc_matrix_multiply_common.h" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_uart/src/service" project_relative_path="zephyr/examples/matrix_multiply_uart/src/service" type="script">
+        <files mask="erpc_matrix_multiply.erpc" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/zephyr/matrix_multiply_uart/src/service" project_relative_path="zephyr/examples/matrix_multiply_uart/src/service" type="cpp_include">
+        <files mask="erpc_matrix_multiply_common.hpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_interface.hpp" hidden="true"/>
+        <files mask="erpc_matrix_multiply_server.hpp" hidden="true"/>
+      </source>
+      <source toolchain="armgcc" relative_path="./" type="workspace">
+        <files mask="middleware_multicore_erpc_zephyr.cmake" hidden="true"/>
+      </source>
+    </component>
+    <component id="middleware.multicore.erpc.java.MIMX8UD5" name="eRPC_java_sources" brief="erpc_java" version="1.13.0" full_name="eRPC Java sources" category="Multicore/Remote Procedure Call" user_visible="false" type="middleware" package_base_path=".././" project_base_path="erpc">
+      <dependencies>
+        <all>
+          <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
+          <device_dependency value="MIMX8UD5xxx08"/>
+        </all>
+      </dependencies>
+      <source relative_path="./erpc/erpc_java" project_relative_path="erpc_java" type="xml">
+        <files mask="checkstyle.xml" hidden="true"/>
+        <files mask="deploy.xml" hidden="true"/>
+        <files mask="pom.xml" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/erpc_java" project_relative_path="erpc_java" type="doc">
+        <files mask="readme.md" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/erpc_java/src/main/java/io/github/embeddedrpc/erpc/auxiliary" project_relative_path="erpc_java/src/main/java/io/github/embeddedrpc/erpc/auxiliary" type="other">
+        <files mask="Crc16.java" hidden="true"/>
+        <files mask="MessageInfo.java" hidden="true"/>
+        <files mask="MessageType.java" hidden="true"/>
+        <files mask="Reference.java" hidden="true"/>
+        <files mask="RequestContext.java" hidden="true"/>
+        <files mask="RequestError.java" hidden="true"/>
+        <files mask="Utils.java" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/erpc_java/src/main/java/io/github/embeddedrpc/erpc/client" project_relative_path="erpc_java/src/main/java/io/github/embeddedrpc/erpc/client" type="other">
+        <files mask="ClientManager.java" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/erpc_java/src/main/java/io/github/embeddedrpc/erpc/codec" project_relative_path="erpc_java/src/main/java/io/github/embeddedrpc/erpc/codec" type="other">
+        <files mask="BasicCodec.java" hidden="true"/>
+        <files mask="BasicCodecFactory.java" hidden="true"/>
+        <files mask="Codec.java" hidden="true"/>
+        <files mask="CodecError.java" hidden="true"/>
+        <files mask="CodecFactory.java" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/erpc_java/src/main/java/io/github/embeddedrpc/erpc/server" project_relative_path="erpc_java/src/main/java/io/github/embeddedrpc/erpc/server" type="other">
+        <files mask="Server.java" hidden="true"/>
+        <files mask="Service.java" hidden="true"/>
+        <files mask="SimpleServer.java" hidden="true"/>
+        <files mask="ThreadServer.java" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/erpc_java/src/main/java/io/github/embeddedrpc/erpc/transport" project_relative_path="erpc_java/src/main/java/io/github/embeddedrpc/erpc/transport" type="other">
+        <files mask="FramedTransport.java" hidden="true"/>
+        <files mask="RequestError.java" hidden="true"/>
+        <files mask="SerialTransport.java" hidden="true"/>
+        <files mask="TCPTransport.java" hidden="true"/>
+        <files mask="Transport.java" hidden="true"/>
+        <files mask="TransportError.java" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/erpc_java/src/test/java/io/github/embeddedrpc/erpc/codec" project_relative_path="erpc_java/src/test/java/io/github/embeddedrpc/erpc/codec" type="other">
+        <files mask="BasicCodecTest.java" hidden="true"/>
+        <files mask="CRC16Test.java" hidden="true"/>
+      </source>
+      <source toolchain="armgcc" relative_path="./" type="workspace">
+        <files mask="middleware_multicore_erpc_java.cmake" hidden="true"/>
+      </source>
+    </component>
+    <component id="middleware.multicore.erpc.examples.MIMX8UD5" name="eRPC_examples" brief="erpc_examples" version="1.13.0" full_name="eRPC examples" category="Multicore/Remote Procedure Call" user_visible="false" type="middleware" package_base_path=".././" project_base_path="erpc">
+      <dependencies>
+        <all>
+          <component_dependency value="middleware.multicore.erpc.common.MIMX8UD5"/>
+          <device_dependency value="MIMX8UD5xxx08"/>
+        </all>
+      </dependencies>
+      <source relative_path="./erpc/examples" project_relative_path="examples" type="doc">
+        <files mask="README.md" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples" project_relative_path="examples" type="script">
+        <files mask="smac.erpc" hidden="true"/>
+        <files mask="temp_alarm.erpc" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/ble" project_relative_path="examples/ble" type="script">
+        <files mask="ble_common.erpc" hidden="true"/>
+        <files mask="ble_gap.erpc" hidden="true"/>
+        <files mask="ble_gatt.erpc" hidden="true"/>
+        <files mask="bluetooth.erpc" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/matrix_multiply_java" project_relative_path="examples/matrix_multiply_java" type="xml">
+        <files mask="pom.xml" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/matrix_multiply_java" project_relative_path="examples/matrix_multiply_java" type="doc">
+        <files mask="readme.md" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/matrix_multiply_java/src/main/java/io/github/embeddedrpc/erpc/example" project_relative_path="examples/matrix_multiply_java/src/main/java/io/github/embeddedrpc/erpc/example" type="other">
+        <files mask="Main.java" hidden="true"/>
+        <files mask="MatrixMultiplyService.java" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/matrix_multiply_java/src/main/java/io/github/embeddedrpc/erpc/example/erpc_matrix_multiply/client" project_relative_path="examples/matrix_multiply_java/src/main/java/io/github/embeddedrpc/erpc/example/erpc_matrix_multiply/client" type="other">
+        <files mask="MatrixMultiplyServiceClient.java" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/matrix_multiply_java/src/main/java/io/github/embeddedrpc/erpc/example/erpc_matrix_multiply/common" project_relative_path="examples/matrix_multiply_java/src/main/java/io/github/embeddedrpc/erpc/example/erpc_matrix_multiply/common" type="other">
+        <files mask="Constants.java" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/matrix_multiply_java/src/main/java/io/github/embeddedrpc/erpc/example/erpc_matrix_multiply/interfaces" project_relative_path="examples/matrix_multiply_java/src/main/java/io/github/embeddedrpc/erpc/example/erpc_matrix_multiply/interfaces" type="other">
+        <files mask="IMatrixMultiplyService.java" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/matrix_multiply_java/src/main/java/io/github/embeddedrpc/erpc/example/erpc_matrix_multiply/server" project_relative_path="examples/matrix_multiply_java/src/main/java/io/github/embeddedrpc/erpc/example/erpc_matrix_multiply/server" type="other">
+        <files mask="AbstractMatrixMultiplyServiceService.java" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/matrix_multiply_java/src/main/resources" project_relative_path="examples/matrix_multiply_java/src/main/resources" type="script">
+        <files mask="erpc_matrix_multiply.erpc" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/matrix_multiply_tcp_python" project_relative_path="examples/matrix_multiply_tcp_python" type="script">
+        <files mask="matrix_multiply.py" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/matrix_multiply_tcp_python" project_relative_path="examples/matrix_multiply_tcp_python" type="doc">
+        <files mask="readme.md" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/matrix_multiply_tcp_python/service" project_relative_path="examples/matrix_multiply_tcp_python/service" type="script">
+        <files mask="__init__.py" hidden="true"/>
+        <files mask="erpc_matrix_multiply.erpc" hidden="true"/>
+      </source>
+      <source relative_path="./erpc/examples/matrix_multiply_tcp_python/service/erpc_matrix_multiply" project_relative_path="examples/matrix_multiply_tcp_python/service/erpc_matrix_multiply" type="script">
+        <files mask="__init__.py" hidden="true"/>
+        <files mask="client.py" hidden="true"/>
+        <files mask="common.py" hidden="true"/>
+        <files mask="interface.py" hidden="true"/>
+        <files mask="server.py" hidden="true"/>
+      </source>
+      <source toolchain="armgcc" relative_path="./" type="workspace">
+        <files mask="middleware_multicore_erpc_examples.cmake" hidden="true"/>
+      </source>
+    </component>
+    <component id="middleware.multicore.erpc.MIMX8UD5" name="eRPC" brief="eRPC" version="1.13.0" full_name="Embedded Remote Procedure Call" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <device_dependency value="MIMX8UD5xxx08"/>
       </dependencies>
@@ -935,6 +1334,7 @@
       </source>
       <source relative_path="./erpc" project_relative_path="erpc_aux" type="doc">
         <files mask="README.md" hidden="true"/>
+        <files mask="SW-Content-Register.txt" hidden="true"/>
       </source>
       <source relative_path="./erpc/docs/eRPC_infrastructure/eRPC" project_relative_path="doc" type="doc">
         <files mask="annotated.html" hidden="true"/>
@@ -942,8 +1342,6 @@
         <files mask="class_dynamic_message_buffer_factory.html" hidden="true"/>
         <files mask="class_r_p_msg_message_buffer_factory-members.html" hidden="true"/>
         <files mask="class_r_p_msg_message_buffer_factory.html" hidden="true"/>
-        <files mask="class_r_p_msg_t_t_y_message_buffer_factory-members.html" hidden="true"/>
-        <files mask="class_r_p_msg_t_t_y_message_buffer_factory.html" hidden="true"/>
         <files mask="class_static_message_buffer_factory-members.html" hidden="true"/>
         <files mask="class_static_message_buffer_factory.html" hidden="true"/>
         <files mask="classerpc_1_1_arbitrated_client_manager-members.html" hidden="true"/>
@@ -962,6 +1360,8 @@
         <files mask="classerpc_1_1_codec_factory.html" hidden="true"/>
         <files mask="classerpc_1_1_crc16-members.html" hidden="true"/>
         <files mask="classerpc_1_1_crc16.html" hidden="true"/>
+        <files mask="classerpc_1_1_cursor-members.html" hidden="true"/>
+        <files mask="classerpc_1_1_cursor.html" hidden="true"/>
         <files mask="classerpc_1_1_dspi_master_transport-members.html" hidden="true"/>
         <files mask="classerpc_1_1_dspi_master_transport.html" hidden="true"/>
         <files mask="classerpc_1_1_dspi_slave_transport-members.html" hidden="true"/>
@@ -976,14 +1376,14 @@
         <files mask="classerpc_1_1_l_p_i2c_slave_transport.html" hidden="true"/>
         <files mask="classerpc_1_1_l_p_spi_slave_transport-members.html" hidden="true"/>
         <files mask="classerpc_1_1_l_p_spi_slave_transport.html" hidden="true"/>
+        <files mask="classerpc_1_1_m_b_o_x_transport-members.html" hidden="true"/>
+        <files mask="classerpc_1_1_m_b_o_x_transport.html" hidden="true"/>
         <files mask="classerpc_1_1_m_u_transport-members.html" hidden="true"/>
         <files mask="classerpc_1_1_m_u_transport.html" hidden="true"/>
         <files mask="classerpc_1_1_manually_constructed-members.html" hidden="true"/>
         <files mask="classerpc_1_1_manually_constructed.html" hidden="true"/>
         <files mask="classerpc_1_1_message_buffer-members.html" hidden="true"/>
         <files mask="classerpc_1_1_message_buffer.html" hidden="true"/>
-        <files mask="classerpc_1_1_message_buffer_1_1_cursor-members.html" hidden="true"/>
-        <files mask="classerpc_1_1_message_buffer_1_1_cursor.html" hidden="true"/>
         <files mask="classerpc_1_1_message_buffer_factory-members.html" hidden="true"/>
         <files mask="classerpc_1_1_message_buffer_factory.html" hidden="true"/>
         <files mask="classerpc_1_1_message_logger-members.html" hidden="true"/>
@@ -996,8 +1396,8 @@
         <files mask="classerpc_1_1_mutex_1_1_guard.html" hidden="true"/>
         <files mask="classerpc_1_1_pre_post_action-members.html" hidden="true"/>
         <files mask="classerpc_1_1_pre_post_action.html" hidden="true"/>
-        <files mask="classerpc_1_1_r_p_msg_base_transport-members.html" hidden="true"/>
-        <files mask="classerpc_1_1_r_p_msg_base_transport.html" hidden="true"/>
+        <files mask="classerpc_1_1_r_p_msg_base-members.html" hidden="true"/>
+        <files mask="classerpc_1_1_r_p_msg_base.html" hidden="true"/>
         <files mask="classerpc_1_1_r_p_msg_linux_transport-members.html" hidden="true"/>
         <files mask="classerpc_1_1_r_p_msg_linux_transport.html" hidden="true"/>
         <files mask="classerpc_1_1_r_p_msg_r_t_o_s_transport-members.html" hidden="true"/>
@@ -1097,6 +1497,8 @@
         <files mask="erpc__manually__constructed_8hpp_source.html" hidden="true"/>
         <files mask="erpc__mbf__setup_8h.html" hidden="true"/>
         <files mask="erpc__mbf__setup_8h_source.html" hidden="true"/>
+        <files mask="erpc__mbox__zephyr__transport_8hpp.html" hidden="true"/>
+        <files mask="erpc__mbox__zephyr__transport_8hpp_source.html" hidden="true"/>
         <files mask="erpc__message__buffer_8hpp.html" hidden="true"/>
         <files mask="erpc__message__buffer_8hpp_source.html" hidden="true"/>
         <files mask="erpc__message__loggers_8hpp.html" hidden="true"/>
@@ -1108,8 +1510,8 @@
         <files mask="erpc__pre__post__action_8h.html" hidden="true"/>
         <files mask="erpc__pre__post__action_8h_source.html" hidden="true"/>
         <files mask="erpc__rpmsg__linux__transport_8hpp_source.html" hidden="true"/>
-        <files mask="erpc__rpmsg__lite__base__transport_8hpp.html" hidden="true"/>
-        <files mask="erpc__rpmsg__lite__base__transport_8hpp_source.html" hidden="true"/>
+        <files mask="erpc__rpmsg__lite__base_8hpp.html" hidden="true"/>
+        <files mask="erpc__rpmsg__lite__base_8hpp_source.html" hidden="true"/>
         <files mask="erpc__rpmsg__lite__rtos__transport_8hpp.html" hidden="true"/>
         <files mask="erpc__rpmsg__lite__rtos__transport_8hpp_source.html" hidden="true"/>
         <files mask="erpc__rpmsg__lite__transport_8hpp.html" hidden="true"/>
@@ -1150,17 +1552,22 @@
         <files mask="erpc__transport__setup_8h_source.html" hidden="true"/>
         <files mask="erpc__uart__cmsis__transport_8hpp.html" hidden="true"/>
         <files mask="erpc__uart__cmsis__transport_8hpp_source.html" hidden="true"/>
+        <files mask="erpc__uart__zephyr__transport_8hpp.html" hidden="true"/>
+        <files mask="erpc__uart__zephyr__transport_8hpp_source.html" hidden="true"/>
         <files mask="erpc__usb__cdc__transport_8hpp.html" hidden="true"/>
         <files mask="erpc__usb__cdc__transport_8hpp_source.html" hidden="true"/>
+        <files mask="erpc__utils_8hpp_source.html" hidden="true"/>
         <files mask="erpc__version_8h_source.html" hidden="true"/>
         <files mask="files.html" hidden="true"/>
         <files mask="functions.html" hidden="true"/>
         <files mask="functions_0x7e.html" hidden="true"/>
+        <files mask="functions_b.html" hidden="true"/>
         <files mask="functions_c.html" hidden="true"/>
         <files mask="functions_d.html" hidden="true"/>
         <files mask="functions_f.html" hidden="true"/>
         <files mask="functions_func.html" hidden="true"/>
         <files mask="functions_func_0x7e.html" hidden="true"/>
+        <files mask="functions_func_b.html" hidden="true"/>
         <files mask="functions_func_c.html" hidden="true"/>
         <files mask="functions_func_d.html" hidden="true"/>
         <files mask="functions_func_f.html" hidden="true"/>
@@ -1213,6 +1620,7 @@
         <files mask="group__itbp__transport.html" hidden="true"/>
         <files mask="group__lpi2c__slave__transport.html" hidden="true"/>
         <files mask="group__lpspi__slave__transport.html" hidden="true"/>
+        <files mask="group__mbox__transport.html" hidden="true"/>
         <files mask="group__message__buffer__factory__setup.html" hidden="true"/>
         <files mask="group__mu__transport.html" hidden="true"/>
         <files mask="group__port.html" hidden="true"/>
@@ -1253,7 +1661,6 @@
         <files mask="annotated_dup.js" hidden="true"/>
         <files mask="class_dynamic_message_buffer_factory.js" hidden="true"/>
         <files mask="class_r_p_msg_message_buffer_factory.js" hidden="true"/>
-        <files mask="class_r_p_msg_t_t_y_message_buffer_factory.js" hidden="true"/>
         <files mask="class_static_message_buffer_factory.js" hidden="true"/>
         <files mask="classerpc_1_1_arbitrated_client_manager.js" hidden="true"/>
         <files mask="classerpc_1_1_basic_codec.js" hidden="true"/>
@@ -1263,6 +1670,7 @@
         <files mask="classerpc_1_1_codec.js" hidden="true"/>
         <files mask="classerpc_1_1_codec_factory.js" hidden="true"/>
         <files mask="classerpc_1_1_crc16.js" hidden="true"/>
+        <files mask="classerpc_1_1_cursor.js" hidden="true"/>
         <files mask="classerpc_1_1_dspi_master_transport.js" hidden="true"/>
         <files mask="classerpc_1_1_dspi_slave_transport.js" hidden="true"/>
         <files mask="classerpc_1_1_framed_transport.js" hidden="true"/>
@@ -1270,17 +1678,17 @@
         <files mask="classerpc_1_1_inter_thread_buffer_transport.js" hidden="true"/>
         <files mask="classerpc_1_1_l_p_i2c_slave_transport.js" hidden="true"/>
         <files mask="classerpc_1_1_l_p_spi_slave_transport.js" hidden="true"/>
+        <files mask="classerpc_1_1_m_b_o_x_transport.js" hidden="true"/>
         <files mask="classerpc_1_1_m_u_transport.js" hidden="true"/>
         <files mask="classerpc_1_1_manually_constructed.js" hidden="true"/>
         <files mask="classerpc_1_1_message_buffer.js" hidden="true"/>
-        <files mask="classerpc_1_1_message_buffer_1_1_cursor.js" hidden="true"/>
         <files mask="classerpc_1_1_message_buffer_factory.js" hidden="true"/>
         <files mask="classerpc_1_1_message_logger.js" hidden="true"/>
         <files mask="classerpc_1_1_message_loggers.js" hidden="true"/>
         <files mask="classerpc_1_1_mutex.js" hidden="true"/>
         <files mask="classerpc_1_1_mutex_1_1_guard.js" hidden="true"/>
         <files mask="classerpc_1_1_pre_post_action.js" hidden="true"/>
-        <files mask="classerpc_1_1_r_p_msg_base_transport.js" hidden="true"/>
+        <files mask="classerpc_1_1_r_p_msg_base.js" hidden="true"/>
         <files mask="classerpc_1_1_r_p_msg_linux_transport.js" hidden="true"/>
         <files mask="classerpc_1_1_r_p_msg_r_t_o_s_transport.js" hidden="true"/>
         <files mask="classerpc_1_1_r_p_msg_t_t_y_r_t_o_s_transport.js" hidden="true"/>
@@ -1312,6 +1720,7 @@
         <files mask="erpc__config_8h.js" hidden="true"/>
         <files mask="erpc__manually__constructed_8hpp.js" hidden="true"/>
         <files mask="erpc__mbf__setup_8h.js" hidden="true"/>
+        <files mask="erpc__mbox__zephyr__transport_8hpp.js" hidden="true"/>
         <files mask="erpc__mu__transport_8hpp.js" hidden="true"/>
         <files mask="erpc__port_8h.js" hidden="true"/>
         <files mask="erpc__pre__post__action_8h.js" hidden="true"/>
@@ -1338,6 +1747,7 @@
         <files mask="group__itbp__transport.js" hidden="true"/>
         <files mask="group__lpi2c__slave__transport.js" hidden="true"/>
         <files mask="group__lpspi__slave__transport.js" hidden="true"/>
+        <files mask="group__mbox__transport.js" hidden="true"/>
         <files mask="group__message__buffer__factory__setup.js" hidden="true"/>
         <files mask="group__mu__transport.js" hidden="true"/>
         <files mask="group__port.js" hidden="true"/>
@@ -1411,12 +1821,6 @@
         <files mask="class_r_p_msg_message_buffer_factory__inherit__graph.map" hidden="true"/>
         <files mask="class_r_p_msg_message_buffer_factory__inherit__graph.md5" hidden="true"/>
         <files mask="class_r_p_msg_message_buffer_factory__inherit__graph.svg" hidden="true"/>
-        <files mask="class_r_p_msg_t_t_y_message_buffer_factory__coll__graph.map" hidden="true"/>
-        <files mask="class_r_p_msg_t_t_y_message_buffer_factory__coll__graph.md5" hidden="true"/>
-        <files mask="class_r_p_msg_t_t_y_message_buffer_factory__coll__graph.svg" hidden="true"/>
-        <files mask="class_r_p_msg_t_t_y_message_buffer_factory__inherit__graph.map" hidden="true"/>
-        <files mask="class_r_p_msg_t_t_y_message_buffer_factory__inherit__graph.md5" hidden="true"/>
-        <files mask="class_r_p_msg_t_t_y_message_buffer_factory__inherit__graph.svg" hidden="true"/>
         <files mask="class_static_message_buffer_factory__coll__graph.map" hidden="true"/>
         <files mask="class_static_message_buffer_factory__coll__graph.md5" hidden="true"/>
         <files mask="class_static_message_buffer_factory__coll__graph.svg" hidden="true"/>
@@ -1504,6 +1908,12 @@
         <files mask="classerpc_1_1_l_p_spi_slave_transport__inherit__graph.map" hidden="true"/>
         <files mask="classerpc_1_1_l_p_spi_slave_transport__inherit__graph.md5" hidden="true"/>
         <files mask="classerpc_1_1_l_p_spi_slave_transport__inherit__graph.svg" hidden="true"/>
+        <files mask="classerpc_1_1_m_b_o_x_transport__coll__graph.map" hidden="true"/>
+        <files mask="classerpc_1_1_m_b_o_x_transport__coll__graph.md5" hidden="true"/>
+        <files mask="classerpc_1_1_m_b_o_x_transport__coll__graph.svg" hidden="true"/>
+        <files mask="classerpc_1_1_m_b_o_x_transport__inherit__graph.map" hidden="true"/>
+        <files mask="classerpc_1_1_m_b_o_x_transport__inherit__graph.md5" hidden="true"/>
+        <files mask="classerpc_1_1_m_b_o_x_transport__inherit__graph.svg" hidden="true"/>
         <files mask="classerpc_1_1_m_u_transport__coll__graph.map" hidden="true"/>
         <files mask="classerpc_1_1_m_u_transport__coll__graph.md5" hidden="true"/>
         <files mask="classerpc_1_1_m_u_transport__coll__graph.svg" hidden="true"/>
@@ -1519,12 +1929,9 @@
         <files mask="classerpc_1_1_message_loggers__coll__graph.map" hidden="true"/>
         <files mask="classerpc_1_1_message_loggers__coll__graph.md5" hidden="true"/>
         <files mask="classerpc_1_1_message_loggers__coll__graph.svg" hidden="true"/>
-        <files mask="classerpc_1_1_r_p_msg_base_transport__coll__graph.map" hidden="true"/>
-        <files mask="classerpc_1_1_r_p_msg_base_transport__coll__graph.md5" hidden="true"/>
-        <files mask="classerpc_1_1_r_p_msg_base_transport__coll__graph.svg" hidden="true"/>
-        <files mask="classerpc_1_1_r_p_msg_base_transport__inherit__graph.map" hidden="true"/>
-        <files mask="classerpc_1_1_r_p_msg_base_transport__inherit__graph.md5" hidden="true"/>
-        <files mask="classerpc_1_1_r_p_msg_base_transport__inherit__graph.svg" hidden="true"/>
+        <files mask="classerpc_1_1_r_p_msg_base__inherit__graph.map" hidden="true"/>
+        <files mask="classerpc_1_1_r_p_msg_base__inherit__graph.md5" hidden="true"/>
+        <files mask="classerpc_1_1_r_p_msg_base__inherit__graph.svg" hidden="true"/>
         <files mask="classerpc_1_1_r_p_msg_linux_transport__coll__graph.map" hidden="true"/>
         <files mask="classerpc_1_1_r_p_msg_linux_transport__coll__graph.md5" hidden="true"/>
         <files mask="classerpc_1_1_r_p_msg_linux_transport__coll__graph.svg" hidden="true"/>
@@ -1705,6 +2112,9 @@
         <files mask="erpc__mbf__setup_8h__incl.map" hidden="true"/>
         <files mask="erpc__mbf__setup_8h__incl.md5" hidden="true"/>
         <files mask="erpc__mbf__setup_8h__incl.svg" hidden="true"/>
+        <files mask="erpc__mbox__zephyr__transport_8hpp__incl.map" hidden="true"/>
+        <files mask="erpc__mbox__zephyr__transport_8hpp__incl.md5" hidden="true"/>
+        <files mask="erpc__mbox__zephyr__transport_8hpp__incl.svg" hidden="true"/>
         <files mask="erpc__message__buffer_8hpp__dep__incl.map" hidden="true"/>
         <files mask="erpc__message__buffer_8hpp__dep__incl.md5" hidden="true"/>
         <files mask="erpc__message__buffer_8hpp__dep__incl.svg" hidden="true"/>
@@ -1723,12 +2133,12 @@
         <files mask="erpc__pre__post__action_8h__incl.map" hidden="true"/>
         <files mask="erpc__pre__post__action_8h__incl.md5" hidden="true"/>
         <files mask="erpc__pre__post__action_8h__incl.svg" hidden="true"/>
-        <files mask="erpc__rpmsg__lite__base__transport_8hpp__dep__incl.map" hidden="true"/>
-        <files mask="erpc__rpmsg__lite__base__transport_8hpp__dep__incl.md5" hidden="true"/>
-        <files mask="erpc__rpmsg__lite__base__transport_8hpp__dep__incl.svg" hidden="true"/>
-        <files mask="erpc__rpmsg__lite__base__transport_8hpp__incl.map" hidden="true"/>
-        <files mask="erpc__rpmsg__lite__base__transport_8hpp__incl.md5" hidden="true"/>
-        <files mask="erpc__rpmsg__lite__base__transport_8hpp__incl.svg" hidden="true"/>
+        <files mask="erpc__rpmsg__lite__base_8hpp__dep__incl.map" hidden="true"/>
+        <files mask="erpc__rpmsg__lite__base_8hpp__dep__incl.md5" hidden="true"/>
+        <files mask="erpc__rpmsg__lite__base_8hpp__dep__incl.svg" hidden="true"/>
+        <files mask="erpc__rpmsg__lite__base_8hpp__incl.map" hidden="true"/>
+        <files mask="erpc__rpmsg__lite__base_8hpp__incl.md5" hidden="true"/>
+        <files mask="erpc__rpmsg__lite__base_8hpp__incl.svg" hidden="true"/>
         <files mask="erpc__rpmsg__lite__rtos__transport_8hpp__incl.map" hidden="true"/>
         <files mask="erpc__rpmsg__lite__rtos__transport_8hpp__incl.md5" hidden="true"/>
         <files mask="erpc__rpmsg__lite__rtos__transport_8hpp__incl.svg" hidden="true"/>
@@ -1801,6 +2211,9 @@
         <files mask="erpc__uart__cmsis__transport_8hpp__incl.map" hidden="true"/>
         <files mask="erpc__uart__cmsis__transport_8hpp__incl.md5" hidden="true"/>
         <files mask="erpc__uart__cmsis__transport_8hpp__incl.svg" hidden="true"/>
+        <files mask="erpc__uart__zephyr__transport_8hpp__incl.map" hidden="true"/>
+        <files mask="erpc__uart__zephyr__transport_8hpp__incl.md5" hidden="true"/>
+        <files mask="erpc__uart__zephyr__transport_8hpp__incl.svg" hidden="true"/>
         <files mask="erpc__usb__cdc__transport_8hpp__incl.map" hidden="true"/>
         <files mask="erpc__usb__cdc__transport_8hpp__incl.md5" hidden="true"/>
         <files mask="erpc__usb__cdc__transport_8hpp__incl.svg" hidden="true"/>
@@ -1848,6 +2261,9 @@
         <files mask="group__lpspi__slave__transport.map" hidden="true"/>
         <files mask="group__lpspi__slave__transport.md5" hidden="true"/>
         <files mask="group__lpspi__slave__transport.svg" hidden="true"/>
+        <files mask="group__mbox__transport.map" hidden="true"/>
+        <files mask="group__mbox__transport.md5" hidden="true"/>
+        <files mask="group__mbox__transport.svg" hidden="true"/>
         <files mask="group__message__buffer__factory__setup.map" hidden="true"/>
         <files mask="group__message__buffer__factory__setup.md5" hidden="true"/>
         <files mask="group__message__buffer__factory__setup.svg" hidden="true"/>
@@ -2011,6 +2427,7 @@
         <files mask="all_13.html" hidden="true"/>
         <files mask="all_14.html" hidden="true"/>
         <files mask="all_15.html" hidden="true"/>
+        <files mask="all_16.html" hidden="true"/>
         <files mask="all_2.html" hidden="true"/>
         <files mask="all_3.html" hidden="true"/>
         <files mask="all_4.html" hidden="true"/>
@@ -2042,6 +2459,7 @@
         <files mask="classes_e.html" hidden="true"/>
         <files mask="enums_0.html" hidden="true"/>
         <files mask="enums_1.html" hidden="true"/>
+        <files mask="enums_2.html" hidden="true"/>
         <files mask="enumvalues_0.html" hidden="true"/>
         <files mask="files_0.html" hidden="true"/>
         <files mask="functions_0.html" hidden="true"/>
@@ -2049,6 +2467,7 @@
         <files mask="functions_10.html" hidden="true"/>
         <files mask="functions_11.html" hidden="true"/>
         <files mask="functions_12.html" hidden="true"/>
+        <files mask="functions_13.html" hidden="true"/>
         <files mask="functions_2.html" hidden="true"/>
         <files mask="functions_3.html" hidden="true"/>
         <files mask="functions_4.html" hidden="true"/>
@@ -2094,6 +2513,7 @@
         <files mask="all_13.js" hidden="true"/>
         <files mask="all_14.js" hidden="true"/>
         <files mask="all_15.js" hidden="true"/>
+        <files mask="all_16.js" hidden="true"/>
         <files mask="all_2.js" hidden="true"/>
         <files mask="all_3.js" hidden="true"/>
         <files mask="all_4.js" hidden="true"/>
@@ -2125,6 +2545,7 @@
         <files mask="classes_e.js" hidden="true"/>
         <files mask="enums_0.js" hidden="true"/>
         <files mask="enums_1.js" hidden="true"/>
+        <files mask="enums_2.js" hidden="true"/>
         <files mask="enumvalues_0.js" hidden="true"/>
         <files mask="files_0.js" hidden="true"/>
         <files mask="functions_0.js" hidden="true"/>
@@ -2132,6 +2553,7 @@
         <files mask="functions_10.js" hidden="true"/>
         <files mask="functions_11.js" hidden="true"/>
         <files mask="functions_12.js" hidden="true"/>
+        <files mask="functions_13.js" hidden="true"/>
         <files mask="functions_2.js" hidden="true"/>
         <files mask="functions_3.js" hidden="true"/>
         <files mask="functions_4.js" hidden="true"/>
@@ -2195,6 +2617,7 @@
         <files mask="_hex_values_8hpp_source.html" hidden="true"/>
         <files mask="_interface_8hpp_source.html" hidden="true"/>
         <files mask="_interface_definition_8hpp_source.html" hidden="true"/>
+        <files mask="_java_generator_8hpp_source.html" hidden="true"/>
         <files mask="_list_type_8hpp_source.html" hidden="true"/>
         <files mask="_logging_8hpp_source.html" hidden="true"/>
         <files mask="_parse_errors_8hpp_source.html" hidden="true"/>
@@ -2289,6 +2712,8 @@
         <files mask="classerpcgen_1_1_interface.html" hidden="true"/>
         <files mask="classerpcgen_1_1_interface_definition-members.html" hidden="true"/>
         <files mask="classerpcgen_1_1_interface_definition.html" hidden="true"/>
+        <files mask="classerpcgen_1_1_java_generator-members.html" hidden="true"/>
+        <files mask="classerpcgen_1_1_java_generator.html" hidden="true"/>
         <files mask="classerpcgen_1_1_list_type-members.html" hidden="true"/>
         <files mask="classerpcgen_1_1_list_type.html" hidden="true"/>
         <files mask="classerpcgen_1_1_program-members.html" hidden="true"/>
@@ -2349,7 +2774,6 @@
         <files mask="functions_d.html" hidden="true"/>
         <files mask="functions_e.html" hidden="true"/>
         <files mask="functions_enum.html" hidden="true"/>
-        <files mask="functions_eval.html" hidden="true"/>
         <files mask="functions_f.html" hidden="true"/>
         <files mask="functions_func.html" hidden="true"/>
         <files mask="functions_func_0x7e.html" hidden="true"/>
@@ -2379,13 +2803,11 @@
         <files mask="functions_h.html" hidden="true"/>
         <files mask="functions_i.html" hidden="true"/>
         <files mask="functions_j.html" hidden="true"/>
-        <files mask="functions_k.html" hidden="true"/>
         <files mask="functions_l.html" hidden="true"/>
         <files mask="functions_m.html" hidden="true"/>
         <files mask="functions_n.html" hidden="true"/>
         <files mask="functions_o.html" hidden="true"/>
         <files mask="functions_p.html" hidden="true"/>
-        <files mask="functions_q.html" hidden="true"/>
         <files mask="functions_r.html" hidden="true"/>
         <files mask="functions_s.html" hidden="true"/>
         <files mask="functions_t.html" hidden="true"/>
@@ -2450,6 +2872,7 @@
         <files mask="classerpcgen_1_1_group.js" hidden="true"/>
         <files mask="classerpcgen_1_1_interface.js" hidden="true"/>
         <files mask="classerpcgen_1_1_interface_definition.js" hidden="true"/>
+        <files mask="classerpcgen_1_1_java_generator.js" hidden="true"/>
         <files mask="classerpcgen_1_1_list_type.js" hidden="true"/>
         <files mask="classerpcgen_1_1_program.js" hidden="true"/>
         <files mask="classerpcgen_1_1_python_generator.js" hidden="true"/>
@@ -2519,6 +2942,7 @@
         <files mask="classerpcgen_1_1_function_type.png" hidden="true"/>
         <files mask="classerpcgen_1_1_generator.png" hidden="true"/>
         <files mask="classerpcgen_1_1_interface.png" hidden="true"/>
+        <files mask="classerpcgen_1_1_java_generator.png" hidden="true"/>
         <files mask="classerpcgen_1_1_list_type.png" hidden="true"/>
         <files mask="classerpcgen_1_1_program.png" hidden="true"/>
         <files mask="classerpcgen_1_1_python_generator.png" hidden="true"/>
@@ -2595,6 +3019,7 @@
         <files mask="classes_c.html" hidden="true"/>
         <files mask="classes_d.html" hidden="true"/>
         <files mask="classes_e.html" hidden="true"/>
+        <files mask="classes_f.html" hidden="true"/>
         <files mask="enums_0.html" hidden="true"/>
         <files mask="enums_1.html" hidden="true"/>
         <files mask="enums_2.html" hidden="true"/>
@@ -2644,7 +3069,6 @@
         <files mask="typedefs_4.html" hidden="true"/>
         <files mask="typedefs_5.html" hidden="true"/>
         <files mask="typedefs_6.html" hidden="true"/>
-        <files mask="typedefs_7.html" hidden="true"/>
         <files mask="variables_0.html" hidden="true"/>
         <files mask="variables_1.html" hidden="true"/>
         <files mask="variables_2.html" hidden="true"/>
@@ -2692,6 +3116,7 @@
         <files mask="classes_c.js" hidden="true"/>
         <files mask="classes_d.js" hidden="true"/>
         <files mask="classes_e.js" hidden="true"/>
+        <files mask="classes_f.js" hidden="true"/>
         <files mask="enums_0.js" hidden="true"/>
         <files mask="enums_1.js" hidden="true"/>
         <files mask="enums_2.js" hidden="true"/>
@@ -2741,7 +3166,6 @@
         <files mask="typedefs_4.js" hidden="true"/>
         <files mask="typedefs_5.js" hidden="true"/>
         <files mask="typedefs_6.js" hidden="true"/>
-        <files mask="typedefs_7.js" hidden="true"/>
         <files mask="variables_0.js" hidden="true"/>
         <files mask="variables_1.js" hidden="true"/>
         <files mask="variables_2.js" hidden="true"/>
@@ -2777,16 +3201,19 @@
       <source relative_path="./erpc/erpc_c/setup" project_relative_path="erpc_aux" type="src">
         <files mask="erpc_setup_mbf_static.cpp" hidden="true"/>
         <files mask="erpc_setup_serial.cpp" hidden="true"/>
+        <files mask="erpc_setup_uart_zephyr.cpp" hidden="true"/>
       </source>
       <source relative_path="./erpc/erpc_c/transports" project_relative_path="erpc_aux" type="src">
         <files mask="erpc_inter_thread_buffer_transport.cpp" hidden="true"/>
         <files mask="erpc_serial_transport.cpp" hidden="true"/>
         <files mask="erpc_tcp_transport.cpp" hidden="true"/>
+        <files mask="erpc_uart_zephyr_transport.cpp" hidden="true"/>
       </source>
       <source relative_path="./erpc/erpc_c/transports" project_relative_path="erpc_aux" type="cpp_include">
         <files mask="erpc_inter_thread_buffer_transport.hpp" hidden="true"/>
         <files mask="erpc_serial_transport.hpp" hidden="true"/>
         <files mask="erpc_tcp_transport.hpp" hidden="true"/>
+        <files mask="erpc_uart_zephyr_transport.hpp" hidden="true"/>
       </source>
       <source relative_path="./erpc/erpc_python" project_relative_path="erpc_aux" type="script">
         <files mask="setup.py" hidden="true"/>
@@ -3036,10 +3463,13 @@
         <files mask="middleware_multicore_erpc.cmake" hidden="true"/>
       </source>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.imx8ulp_m33_bm.MIMX8UD5" name="rpmsg_lite_imx8ulp_m33_bm" brief="RPMsg-Lite for evkmimx8ulp_m33 baremetal application" version="5.1.1" full_name="Remote Procedure Messaging Lite porting layer for evkmimx8ulp_m33 board" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.imx8ulp_m33_bm.MIMX8UD5" name="rpmsg_lite_imx8ulp_m33_bm" brief="RPMsg-Lite for evkmimx8ulp_m33 baremetal application" version="5.1.2" full_name="Remote Procedure Messaging Lite porting layer for evkmimx8ulp_m33 board" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>
         <all>
-          <board_dependency value="evk9mimx8ulp"/>
+          <any_of>
+            <board_dependency value="evkmimx8ulp"/>
+            <board_dependency value="evk9mimx8ulp"/>
+          </any_of>
           <device_dependency value="MIMX8UD5xxx08"/>
         </all>
       </dependencies>
@@ -3056,12 +3486,15 @@
         <include_path relative_path="./rpmsg_lite/lib/include/platform/imx8ulp_m33" project_relative_path="porting" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.imx8ulp_m33_freertos.MIMX8UD5" name="rpmsg_lite_imx8ulp_m33_freertos" brief="RPMsg-Lite for evkmimx8ulp_m33 FreeRTOS application" version="5.1.1" full_name="Remote Procedure Messaging Lite porting layer for evkmimx8ulp_m33 board" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.imx8ulp_m33_freertos.MIMX8UD5" name="rpmsg_lite_imx8ulp_m33_freertos" brief="RPMsg-Lite for evkmimx8ulp_m33 FreeRTOS application" version="5.1.2" full_name="Remote Procedure Messaging Lite porting layer for evkmimx8ulp_m33 board" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>
         <all>
+          <any_of>
+            <board_dependency value="evkmimx8ulp"/>
+            <board_dependency value="evk9mimx8ulp"/>
+          </any_of>
           <component_dependency value="middleware.freertos-kernel.MIMX8UD5"/>
           <component_dependency value="middleware.freertos-kernel.heap_4.MIMX8UD5"/>
-          <board_dependency value="evk9mimx8ulp"/>
           <device_dependency value="MIMX8UD5xxx08"/>
         </all>
       </dependencies>
@@ -3078,10 +3511,13 @@
         <include_path relative_path="./rpmsg_lite/lib/include/platform/imx8ulp_m33" project_relative_path="porting" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.imx8ulp_fusionf1_bm.MIMX8UD5" name="rpmsg_lite_imx8ulp_fusionf1_bm" brief="RPMsg-Lite for evkmimx8ulp fusion dsp baremetal application" version="5.1.1" full_name="Remote Procedure Messaging Lite porting layer for evkmimxrt595 board" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.imx8ulp_fusionf1_bm.MIMX8UD5" name="rpmsg_lite_imx8ulp_fusionf1_bm" brief="RPMsg-Lite for evkmimx8ulp fusion dsp baremetal application" version="5.1.2" full_name="Remote Procedure Messaging Lite porting layer for evkmimxrt595 board" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>
         <all>
-          <board_dependency value="evk9mimx8ulp"/>
+          <any_of>
+            <board_dependency value="evkmimx8ulp"/>
+            <board_dependency value="evk9mimx8ulp"/>
+          </any_of>
           <device_dependency value="MIMX8UD5xxx08"/>
         </all>
       </dependencies>
@@ -3098,10 +3534,103 @@
         <include_path relative_path="./rpmsg_lite/lib/include/platform/imx8ulp_fusionf1" project_relative_path="include/platform/imx8ulp_fusionf1" type="c_include"/>
       </include_paths>
     </component>
-    <component id="middleware.multicore.rpmsg_lite.MIMX8UD5" name="rpmsg_lite" brief="RPMsg-Lite" version="5.1.1" full_name="Remote Procedure Messaging Lite library" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+    <component id="middleware.multicore.rpmsg_lite.zephyr.MIMX8UD5" name="rpmsg_lite zephyr" brief="RPMsg-Lite Zephyr environment sources" version="5.1.2" full_name="RPMsg-Lite Zephyr environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
+      <dependencies>
+        <all>
+          <component_dependency value="middleware.multicore.rpmsg_lite.MIMX8UD5"/>
+          <device_dependency value="MIMX8UD5xxx08"/>
+        </all>
+      </dependencies>
+      <source relative_path="./rpmsg_lite/lib/rpmsg_lite/porting/environment" project_relative_path="rpmsg_lite/porting/environment" type="src">
+        <files mask="rpmsg_env_zephyr.c"/>
+      </source>
+      <source relative_path="./rpmsg_lite/lib/include" project_relative_path="include" type="c_include">
+        <files mask="rpmsg_queue.h"/>
+      </source>
+      <source relative_path="./rpmsg_lite/lib/rpmsg_lite" project_relative_path="rpmsg_lite" type="src">
+        <files mask="rpmsg_queue.c"/>
+      </source>
+      <source relative_path="./rpmsg_lite/lib/include/environment/zephyr" project_relative_path="include/environment/zephyr" type="c_include">
+        <files mask="rpmsg_env_specific.h"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr" project_relative_path="rpmsg_lite/zephyr" type="doc">
+        <files mask="CMakeLists.txt"/>
+        <files mask="README.md"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr" project_relative_path="rpmsg_lite/zephyr" type="other">
+        <files mask="module.yml"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr" project_relative_path="zephyr" type="other">
+        <files mask="Kconfig" hidden="true"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong" project_relative_path="rpmsg_lite/zephyr/samples/rpmsglite_pingpong" type="doc">
+        <files mask="CMakeLists.txt"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong" project_relative_path="rpmsg_lite/zephyr/samples/rpmsglite_pingpong" type="other">
+        <files mask="Kconfig.sysbuild"/>
+        <files mask="README.rst"/>
+        <files mask="prj.conf"/>
+        <files mask="sample.yaml"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong" project_relative_path="rpmsg_lite/zephyr/samples/rpmsglite_pingpong" type="c_include">
+        <files mask="common.h"/>
+        <files mask="rpmsg_config.h"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong" project_relative_path="rpmsg_lite/zephyr/samples/rpmsglite_pingpong" type="script">
+        <files mask="sysbuild.cmake"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong" project_relative_path="zephyr/samples/rpmsglite_pingpong" type="other">
+        <files mask="Kconfig" hidden="true"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong/boards" project_relative_path="zephyr/samples/rpmsglite_pingpong/boards" type="other">
+        <files mask="lpcxpresso54114_m4.conf" hidden="true"/>
+        <files mask="lpcxpresso54114_m4.overlay" hidden="true"/>
+        <files mask="lpcxpresso55s69_cpu0.conf" hidden="true"/>
+        <files mask="lpcxpresso55s69_cpu0.overlay" hidden="true"/>
+        <files mask="mimxrt1160_evk_cm7.conf" hidden="true"/>
+        <files mask="mimxrt1160_evk_cm7.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm7.conf" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm7.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm7.conf" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm7.overlay" hidden="true"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong/remote" project_relative_path="zephyr/samples/rpmsglite_pingpong/remote" type="doc">
+        <files mask="CMakeLists.txt" hidden="true"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong/remote" project_relative_path="zephyr/samples/rpmsglite_pingpong/remote" type="other">
+        <files mask="prj.conf" hidden="true"/>
+        <files mask="sample.yaml" hidden="true"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong/remote/boards" project_relative_path="zephyr/samples/rpmsglite_pingpong/remote/boards" type="other">
+        <files mask="lpcxpresso54114_m0.conf" hidden="true"/>
+        <files mask="lpcxpresso54114_m0.overlay" hidden="true"/>
+        <files mask="lpcxpresso55s69_cpu1.conf" hidden="true"/>
+        <files mask="lpcxpresso55s69_cpu1.overlay" hidden="true"/>
+        <files mask="mimxrt1160_evk_cm4.conf" hidden="true"/>
+        <files mask="mimxrt1160_evk_cm4.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm4.conf" hidden="true"/>
+        <files mask="mimxrt1170_evk_cm4.overlay" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm4.conf" hidden="true"/>
+        <files mask="mimxrt1170_evkb_cm4.overlay" hidden="true"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong/remote/src" project_relative_path="zephyr/samples/rpmsglite_pingpong/remote/src" type="src">
+        <files mask="main.c" hidden="true"/>
+      </source>
+      <source relative_path="./rpmsg_lite/zephyr/samples/rpmsglite_pingpong/src" project_relative_path="zephyr/samples/rpmsglite_pingpong/src" type="src">
+        <files mask="main.c" hidden="true"/>
+      </source>
+      <source toolchain="armgcc" relative_path="./" type="workspace">
+        <files mask="middleware_multicore_rpmsg_lite_zephyr.cmake" hidden="true"/>
+      </source>
+      <include_paths>
+        <include_path relative_path="./rpmsg_lite/lib/include/environment/zephyr" project_relative_path="include/environment/zephyr" type="c_include"/>
+      </include_paths>
+    </component>
+    <component id="middleware.multicore.rpmsg_lite.MIMX8UD5" name="rpmsg_lite" brief="RPMsg-Lite" version="5.1.2" full_name="Remote Procedure Messaging Lite library" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>
         <all>
           <any_of>
+            <board_dependency value="evkmimx8ulp"/>
             <board_dependency value="evk9mimx8ulp"/>
             <device_dependency value="MIMX8UD5xxx08"/>
           </any_of>
