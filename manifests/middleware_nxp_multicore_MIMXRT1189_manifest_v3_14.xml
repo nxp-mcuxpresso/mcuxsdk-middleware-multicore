@@ -10,7 +10,7 @@
     <definition extID="middleware.freertos-kernel.heap_4.MIMXRT1189"/>
     <definition extID="platform.drivers.mu1.MIMXRT1189"/>
   </externalDefinitions>
-  <ksdk id="MCUXpressoSDK216000_middleware_nxp_multicore_MIMXRT1189_manifest_v3_14" name="MCUXpressoSDK216000_middleware_nxp_multicore_MIMXRT1189_manifest_v3_14" version="2.16.000" revision="2.16.000"/>
+  <ksdk id="MCUXpressoSDK216100_middleware_nxp_multicore_MIMXRT1189_manifest_v3_14" name="MCUXpressoSDK216100_middleware_nxp_multicore_MIMXRT1189_manifest_v3_14" version="2.16.100" revision="2.16.100"/>
   <components>
     <component id="middleware.multicore.rpmsg_lite.bm.MIMXRT1189" name="rpmsg_lite" brief="RPMsg-Lite BM environment sources" version="5.1.2" full_name="RPMsg-Lite baremetal environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>

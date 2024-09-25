@@ -11,7 +11,7 @@
     <definition extID="platform.drivers.imu.KW45B41Z83"/>
     <definition extID="middleware.wireless.ble_controller_thread_interface.KW45B41Z83"/>
   </externalDefinitions>
-  <ksdk id="MCUXpressoSDK216000_middleware_nxp_multicore_KW45B41Z83_manifest_v3_14" name="MCUXpressoSDK216000_middleware_nxp_multicore_KW45B41Z83_manifest_v3_14" version="2.16.000" revision="2.16.000"/>
+  <ksdk id="MCUXpressoSDK216100_middleware_nxp_multicore_KW45B41Z83_manifest_v3_14" name="MCUXpressoSDK216100_middleware_nxp_multicore_KW45B41Z83_manifest_v3_14" version="2.16.100" revision="2.16.100"/>
   <components>
     <component id="middleware.multicore.KW45B41Z83" name="multicore middleware" brief="Multicore SDK" version="2.16.0" full_name="Multicore Software Development Kit" category="Multicore/MulticoreSDK" user_visible="false" type="middleware" package_base_path=".././" project_base_path="multicore">
       <dependencies>

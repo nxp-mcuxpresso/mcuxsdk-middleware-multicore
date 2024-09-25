@@ -10,7 +10,7 @@
     <definition extID="middleware.freertos-kernel.heap_4.MCXN547"/>
     <definition extID="platform.drivers.mailbox.MCXN547"/>
   </externalDefinitions>
-  <ksdk id="MCUXpressoSDK216000_middleware_nxp_multicore_MCXN547_manifest_v3_14" name="MCUXpressoSDK216000_middleware_nxp_multicore_MCXN547_manifest_v3_14" version="2.16.000" revision="2.16.000"/>
+  <ksdk id="MCUXpressoSDK216100_middleware_nxp_multicore_MCXN547_manifest_v3_14" name="MCUXpressoSDK216100_middleware_nxp_multicore_MCXN547_manifest_v3_14" version="2.16.100" revision="2.16.100"/>
   <components>
     <component id="middleware.multicore.rpmsg_lite.bm.MCXN547" name="rpmsg_lite" brief="RPMsg-Lite BM environment sources" version="5.1.2" full_name="RPMsg-Lite baremetal environment layer sources" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>

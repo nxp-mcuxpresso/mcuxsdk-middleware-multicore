@@ -6,12 +6,11 @@
     <definition extID="armgcc"/>
     <definition extID="middleware.baremetal.MIMXRT1176"/>
     <definition extID="middleware.freertos-kernel.MIMXRT1176"/>
-    <definition extID="evkmimxrt1170"/>
     <definition extID="evkbmimxrt1170"/>
     <definition extID="platform.drivers.mu.MIMXRT1176"/>
     <definition extID="middleware.freertos-kernel.heap_4.MIMXRT1176"/>
   </externalDefinitions>
-  <ksdk id="MCUXpressoSDK216000_middleware_nxp_multicore_MIMXRT1176_manifest_v3_14" name="MCUXpressoSDK216000_middleware_nxp_multicore_MIMXRT1176_manifest_v3_14" version="2.16.000" revision="2.16.000"/>
+  <ksdk id="MCUXpressoSDK216100_middleware_nxp_multicore_MIMXRT1176_manifest_v3_14" name="MCUXpressoSDK216100_middleware_nxp_multicore_MIMXRT1176_manifest_v3_14" version="2.16.100" revision="2.16.100"/>
   <components>
     <component id="middleware.multicore.MIMXRT1176" name="multicore middleware" brief="Multicore SDK" version="2.16.0" full_name="Multicore Software Development Kit" category="Multicore/MulticoreSDK" user_visible="false" type="middleware" package_base_path=".././" project_base_path="multicore">
       <dependencies>
@@ -120,7 +119,6 @@
     <component id="middleware.multicore.erpc.common.MIMXRT1176" name="eRPC_common" brief="eRPC" version="1.13.0" full_name="Embedded Remote Procedure Call" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <any_of>
-          <board_dependency value="evkmimxrt1170"/>
           <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </any_of>
@@ -1315,7 +1313,6 @@
     <component id="middleware.multicore.erpc.MIMXRT1176" name="eRPC" brief="eRPC" version="1.13.0" full_name="Embedded Remote Procedure Call" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc">
       <dependencies>
         <any_of>
-          <board_dependency value="evkmimxrt1170"/>
           <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </any_of>
@@ -3461,7 +3458,6 @@
       </defines>
       <dependencies>
         <any_of>
-          <board_dependency value="evkmimxrt1170"/>
           <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </any_of>
@@ -3567,12 +3563,9 @@
     <component id="middleware.multicore.mcmgr.imxrt1170.MIMXRT1176" name="mcmgr_imxrt1170" brief="Multicore Manager for evkmimxrt1170 board" version="4.1.5" full_name="Multicore Manager for evkmimxrt1170 board" category="Multicore/Core Management" user_visible="true" type="middleware" package_base_path=".././" project_base_path="mcmgr">
       <dependencies>
         <all>
-          <any_of>
-            <board_dependency value="evkmimxrt1170"/>
-            <board_dependency value="evkbmimxrt1170"/>
-          </any_of>
           <component_dependency value="middleware.multicore.mcmgr.MIMXRT1176"/>
           <component_dependency value="platform.drivers.mu.MIMXRT1176"/>
+          <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </all>
       </dependencies>
@@ -3587,10 +3580,7 @@
     <component id="middleware.multicore.rpmsg_lite.imxrt1170_bm.MIMXRT1176" name="rpmsg_lite_imxrt1170_bm" brief="RPMsg-Lite for evkmimxrt1170 baremetal application" version="5.1.2" full_name="Remote Procedure Messaging Lite porting layer for evkmimxrt1170 board" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>
         <all>
-          <any_of>
-            <board_dependency value="evkmimxrt1170"/>
-            <board_dependency value="evkbmimxrt1170"/>
-          </any_of>
+          <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </all>
       </dependencies>
@@ -3610,12 +3600,9 @@
     <component id="middleware.multicore.rpmsg_lite.imxrt1170_freertos.MIMXRT1176" name="rpmsg_lite_imxrt1170_freertos" brief="RPMsg-Lite for evkmimxrt1170 FreeRTOS application" version="5.1.2" full_name="Remote Procedure Messaging Lite porting layer for evkmimxrt1170 board" category="Multicore/Inter-Core Messaging System" user_visible="false" type="middleware" package_base_path=".././" project_base_path="rpmsg_lite">
       <dependencies>
         <all>
-          <any_of>
-            <board_dependency value="evkmimxrt1170"/>
-            <board_dependency value="evkbmimxrt1170"/>
-          </any_of>
           <component_dependency value="middleware.freertos-kernel.MIMXRT1176"/>
           <component_dependency value="middleware.freertos-kernel.heap_4.MIMXRT1176"/>
+          <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </all>
       </dependencies>
@@ -3635,14 +3622,11 @@
     <component id="middleware.multicore.rpmsg_lite.bm.config.imxrt1170.MIMXRT1176" name="rpmsg_lite_bm_imxrt1170" brief="RPMsg-Lite baremetal for evkmimxrt1170 board" version="5.1.2" full_name="Remote Procedure Messaging Lite BM for evkmimxrt1170 board" category="Multicore/Inter-Core Messaging System" user_visible="true" type="middleware" package_base_path=".././" project_base_path="source">
       <dependencies>
         <all>
-          <any_of>
-            <board_dependency value="evkmimxrt1170"/>
-            <board_dependency value="evkbmimxrt1170"/>
-          </any_of>
           <component_dependency value="middleware.multicore.rpmsg_lite.MIMXRT1176"/>
           <component_dependency value="middleware.multicore.rpmsg_lite.bm.MIMXRT1176"/>
           <component_dependency value="middleware.multicore.mcmgr.imxrt1170.MIMXRT1176"/>
           <component_dependency value="middleware.multicore.rpmsg_lite.imxrt1170_bm.MIMXRT1176"/>
+          <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </all>
       </dependencies>
@@ -3659,14 +3643,11 @@
     <component id="middleware.multicore.rpmsg_lite.freertos.config.imxrt1170.MIMXRT1176" name="rpmsg_lite_freertos_imxrt1170" brief="RPMsg-Lite FreeRTOS for evkmimxrt1170 board" version="5.1.2" full_name="Remote Procedure Messaging Lite FreeRTOS for evkmimxrt1170 board" category="Multicore/Inter-Core Messaging System" user_visible="true" type="middleware" package_base_path=".././" project_base_path="source">
       <dependencies>
         <all>
-          <any_of>
-            <board_dependency value="evkmimxrt1170"/>
-            <board_dependency value="evkbmimxrt1170"/>
-          </any_of>
           <component_dependency value="middleware.multicore.rpmsg_lite.MIMXRT1176"/>
           <component_dependency value="middleware.multicore.rpmsg_lite.freertos.MIMXRT1176"/>
           <component_dependency value="middleware.multicore.mcmgr.imxrt1170.MIMXRT1176"/>
           <component_dependency value="middleware.multicore.rpmsg_lite.imxrt1170_freertos.MIMXRT1176"/>
+          <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </all>
       </dependencies>
@@ -3776,7 +3757,6 @@
       <dependencies>
         <all>
           <any_of>
-            <board_dependency value="evkmimxrt1170"/>
             <board_dependency value="evkbmimxrt1170"/>
             <device_dependency value="MIMXRT1176xxxxx"/>
           </any_of>
@@ -3950,10 +3930,7 @@
     <component id="middleware.multicore.erpc_common_multicore.MIMXRT1176" name="erpc_common_multicore" brief="erpc examples common files" version="1.0.0" full_name="erpc examples common files" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="source">
       <dependencies>
         <all>
-          <any_of>
-            <board_dependency value="evkmimxrt1170"/>
-            <board_dependency value="evkbmimxrt1170"/>
-          </any_of>
+          <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </all>
       </dependencies>
@@ -3973,10 +3950,7 @@
     <component id="middleware.multicore.erpc_common_multicore_matrix_multiply_client.MIMXRT1176" name="erpc_common_multicore_matrix_multiply_client" brief="erpc matrix_multiply_client examples common files" version="1.0.0" full_name="erpc matrix_multiply_client examples common files" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc/service">
       <dependencies>
         <all>
-          <any_of>
-            <board_dependency value="evkmimxrt1170"/>
-            <board_dependency value="evkbmimxrt1170"/>
-          </any_of>
+          <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </all>
       </dependencies>
@@ -4007,10 +3981,7 @@
     <component id="middleware.multicore.erpc_common_multicore_matrix_multiply_server.MIMXRT1176" name="erpc_common_multicore_matrix_multiply_server" brief="erpc matrix_multiply_server examples common files" version="1.0.0" full_name="erpc matrix_multiply_server examples common files" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc/service">
       <dependencies>
         <all>
-          <any_of>
-            <board_dependency value="evkmimxrt1170"/>
-            <board_dependency value="evkbmimxrt1170"/>
-          </any_of>
+          <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </all>
       </dependencies>
@@ -4041,10 +4012,7 @@
     <component id="middleware.multicore.erpc_common_two_way_rpc_core0.MIMXRT1176" name="erpc_common_two_way_rpc_core0" brief="erpc erpc_two_way_rpc_core0 examples common files" version="1.0.0" full_name="erpc erpc_two_way_rpc_core0 examples common files" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc/service">
       <dependencies>
         <all>
-          <any_of>
-            <board_dependency value="evkmimxrt1170"/>
-            <board_dependency value="evkbmimxrt1170"/>
-          </any_of>
+          <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </all>
       </dependencies>
@@ -4083,10 +4051,7 @@
     <component id="middleware.multicore.erpc_common_two_way_rpc_core1.MIMXRT1176" name="erpc_common_two_way_rpc_core1" brief="erpc erpc_two_way_rpc_core1 examples common files" version="1.0.0" full_name="erpc erpc_two_way_rpc_core1 examples common files" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc/service">
       <dependencies>
         <all>
-          <any_of>
-            <board_dependency value="evkmimxrt1170"/>
-            <board_dependency value="evkbmimxrt1170"/>
-          </any_of>
+          <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </all>
       </dependencies>
@@ -4125,10 +4090,7 @@
     <component id="middleware.multicore.erpc_common_multiprocessor.MIMXRT1176" name="erpc_common_multiprocessor" brief="erpc multiprocessor examples common files" version="1.0.0" full_name="erpc multiprocessor examples common files" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="source">
       <dependencies>
         <all>
-          <any_of>
-            <board_dependency value="evkmimxrt1170"/>
-            <board_dependency value="evkbmimxrt1170"/>
-          </any_of>
+          <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </all>
       </dependencies>
@@ -4148,10 +4110,7 @@
     <component id="middleware.multicore.erpc_common_multiprocessor_matrix_multiply_client.MIMXRT1176" name="erpc_common_multiprocessor_matrix_multiply_client" brief="erpc multiprocessor matrix_multiply_client examples common files" version="1.0.0" full_name="erpc multiprocessor matrix_multiply_client examples common files" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc/service">
       <dependencies>
         <all>
-          <any_of>
-            <board_dependency value="evkmimxrt1170"/>
-            <board_dependency value="evkbmimxrt1170"/>
-          </any_of>
+          <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </all>
       </dependencies>
@@ -4182,10 +4141,7 @@
     <component id="middleware.multicore.erpc_common_multiprocessor_matrix_multiply_server.MIMXRT1176" name="erpc_common_multiprocessor_matrix_multiply_server" brief="erpc multiprocessor matrix_multiply_server examples common files" version="1.0.0" full_name="erpc multiprocessor matrix_multiply_server examples common files" category="Multicore/Remote Procedure Call" user_visible="true" type="middleware" package_base_path=".././" project_base_path="erpc/service">
       <dependencies>
         <all>
-          <any_of>
-            <board_dependency value="evkmimxrt1170"/>
-            <board_dependency value="evkbmimxrt1170"/>
-          </any_of>
+          <board_dependency value="evkbmimxrt1170"/>
           <device_dependency value="MIMXRT1176xxxxx"/>
         </all>
       </dependencies>

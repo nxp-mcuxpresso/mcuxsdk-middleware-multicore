@@ -9,7 +9,7 @@
     <definition extID="k32w148evk"/>
     <definition extID="platform.drivers.imu.K32W1480"/>
   </externalDefinitions>
-  <ksdk id="MCUXpressoSDK216000_middleware_nxp_multicore_K32W1480_manifest_v3_14" name="MCUXpressoSDK216000_middleware_nxp_multicore_K32W1480_manifest_v3_14" version="2.16.000" revision="2.16.000"/>
+  <ksdk id="MCUXpressoSDK216100_middleware_nxp_multicore_K32W1480_manifest_v3_14" name="MCUXpressoSDK216100_middleware_nxp_multicore_K32W1480_manifest_v3_14" version="2.16.100" revision="2.16.100"/>
   <components>
     <component id="middleware.multicore.K32W1480" name="multicore middleware" brief="Multicore SDK" version="2.16.0" full_name="Multicore Software Development Kit" category="Multicore/MulticoreSDK" user_visible="false" type="middleware" package_base_path=".././" project_base_path="multicore">
       <dependencies>
