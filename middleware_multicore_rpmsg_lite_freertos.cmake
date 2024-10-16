@@ -102,6 +102,18 @@ target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
 )
 endif()
 
+if(CONFIG_USE_middleware_freertos-kernel_MIMX9596)
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/porting/environment/rpmsg_env_freertos.c
+)
+endif()
+
+if(CONFIG_USE_middleware_freertos-kernel_MIMX9596)
+target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/rpmsg_queue.c
+)
+endif()
+
 if(CONFIG_USE_middleware_freertos-kernel_K32L3A60_cm0plus)
 target_sources(${MCUX_SDK_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/rpmsg_lite/lib/rpmsg_lite/porting/environment/rpmsg_env_freertos.c
