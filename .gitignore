@@ -1,2 +1,17 @@
-rpmsg_lite
-erpc
+# External Modules
+erpc/
+rpmsg_lite/
+rpmsg-lite/
+mcmgr/
+
+# Generated
+.vscode
+.vscode-ctags
+armgcc
+mdk
+iar
+kds
+build
+mcmgr/test/**/mcmgr_*.xml
+__pycache__
+*.egg-info
