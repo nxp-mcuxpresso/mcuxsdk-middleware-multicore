@@ -5,7 +5,7 @@ This table describes the release contents. Not all MCUXpresso SDK packages conta
 |Deliverable|Location|
 |-----------|--------|
 |Multicore SDK location within the MCUXpresso SDK folder structure|<MCUXpressoSDK\_install\_dir\>/middleware/multicore/...|
-|Documentation|<MCUXpressoSDK\_install\_dir\>/docs/multicore/…|
+|Documentation|<MCSDK\_dir\>/mcuxsdk-doc/…|
 |Embedded Remote Procedure Call component|<MCSDK\_dir\>/erpc/…|
 |Multicore Manager component|<MCSDK\_dir\>/mcmgr/…|
 |RPMsg-Lite|<MCSDK\_dir\>/rpmsg\_lite/…|
