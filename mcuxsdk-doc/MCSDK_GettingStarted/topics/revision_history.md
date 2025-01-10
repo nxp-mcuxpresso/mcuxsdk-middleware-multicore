@@ -24,4 +24,5 @@ This table summarizes revisions to this document.
 |17|27 July 2023|Updated for the MCUXpresso SDK 2.14.0|
 |18|10 January 2024|Updated for the MCUXpresso SDK 2.15.000|
 |19|17 June 2024|Updated for the MCUXpresso SDK v2.16.000|
+|19|13 Jan 2025|Updated for the MCUXpresso SDK 24.12.00|
 
