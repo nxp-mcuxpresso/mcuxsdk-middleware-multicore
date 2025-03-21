@@ -2,15 +2,15 @@
 
 ## Overview
 
-These are the release notes for the NXP Multicore Software Development Kit (MCSDK) version 24.12.00.  
+These are the release notes for the NXP Multicore Software Development Kit (MCSDK) version 25.03.00.  
 This software package contains components for efficient work with multicore devices as well as for the  
 multiprocessor communication.
 
 ## What is new
 
-- eRPC [CHANGELOG](https://github.com/EmbeddedRPC/erpc/blob/release/24.12.00/CHANGELOG.md)
-- RPMsg-Lite [CHANGELOG](https://github.com/nxp-mcuxpresso/rpmsg-lite/blob/release/24.12.00/CHANGELOG.md)
-- MCMgr [CHANGELOG](https://github.com/nxp-mcuxpresso/mcux-mcmgr/blob/release/24.12.00/CHANGELOG.md)
+- eRPC [CHANGELOG](https://github.com/EmbeddedRPC/erpc/blob/release/25.03.00/CHANGELOG.md)
+- RPMsg-Lite [CHANGELOG](https://github.com/nxp-mcuxpresso/rpmsg-lite/blob/release/25.03.00/CHANGELOG.md)
+- MCMgr [CHANGELOG](https://github.com/nxp-mcuxpresso/mcux-mcmgr/blob/release/25.03.00/CHANGELOG.md)
 
 - Supported evaluation boards (multicore examples):
   - LPCXpresso55S69
@@ -43,12 +43,7 @@ multiprocessor communication.
 
 ## Development tools
 
-The Multicore SDK (MCSDK) version 24.12.00 was compiled and tested with these development tools:
-
-- IAR Embedded Workbench for Arm version 9.60.2
-- MDK-ARM Microcontroller Development Kit (Keil) version 5.40
-- Makefiles support with GCC revision 13.2.Rel1 from Arm Embedded
-- MCUXpresso IDE, Rev. 24.09.25
+The Multicore SDK (MCSDK) was compiled and tested with development tools referred in: [Development tools](https://mcuxpresso.nxp.com/mcuxsdk/latest/html/gsd/installation.html#toolchain)
 
 ## Release contents
 
