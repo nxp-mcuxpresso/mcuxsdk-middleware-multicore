@@ -1,10 +1,10 @@
 # What is new
 
--   eRPC [CHANGELOG](https://github.com/EmbeddedRPC/erpc/blob/release/24.12.00/CHANGELOG.md)
+-   eRPC [CHANGELOG](https://github.com/EmbeddedRPC/erpc/blob/release/25.03.00/CHANGELOG.md)
 
--   RPMsg-Lite [CHANGELOG](https://github.com/nxp-mcuxpresso/rpmsg-lite/blob/release/24.12.00/CHANGELOG.md)
+-   RPMsg-Lite [CHANGELOG](https://github.com/nxp-mcuxpresso/rpmsg-lite/blob/release/25.03.00/CHANGELOG.md)
 
--   MCMgr [CHANGELOG](https://github.com/nxp-mcuxpresso/mcux-mcmgr/blob/release/24.12.00/CHANGELOG.md)
+-   MCMgr [CHANGELOG](https://github.com/nxp-mcuxpresso/mcux-mcmgr/blob/release/25.03.00/CHANGELOG.md)
 
 
 -   Supported evaluation boards \(multicore examples\):
@@ -35,4 +35,3 @@
     -   MCX-N9XX-EVK
     -   FRDM-MCXN947
     -   MIMXRT700-EVK
-

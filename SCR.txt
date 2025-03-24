@@ -1,5 +1,5 @@
 Name: mcux-sdk-middleware-multicore
-Version: 24.12.00
+Version: 25.03.00
 Outgoing License: BSD-3-Clause
 License File: LICENSE
 Format: source code
