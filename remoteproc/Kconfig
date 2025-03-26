@@ -1,5 +1,5 @@
 #
-# Copyright 2024 NXP
+# Copyright 2024-2025 NXP
 #
 # SPDX-License-Identifier: BSD-3-Clause
 #
@@ -7,4 +7,9 @@
 menuconfig MCUX_COMPONENT_middleware.multicore.remoteproc
     bool "Multicore Remote Processor Framework"
     help
-        This option will enable Multicore Remote Processor Framework 
+        This option will enable Multicore Remote Processor Framework
+
+menuconfig MCUX_COMPONENT_middleware.multicore.remoteproc.empty_rsc_table
+    bool "Empty resource table of Multicore Remote Processor Framework"
+    help
+        This option will enable Empty resource table of Multicore Remote Processor Framework
