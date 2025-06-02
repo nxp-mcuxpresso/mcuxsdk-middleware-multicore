@@ -5,11 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [25.06.00]
+
+- Multicore SDK component versions:
+    - embedded Remote Procedure Call (eRPC) v1.14.0
+    - eRPC generator (erpcgen) v1.14.0
+    - Multicore Manager (MCMgr) v5.0.0
+    - RPMsg-Lite v5.2.0
+
+## [25.03.00]
+
+- Multicore SDK component versions:
+    - embedded Remote Procedure Call (eRPC) v1.13.0
+    - eRPC generator (erpcgen) v1.13.0
+    - Multicore Manager (MCMgr) v4.1.7
+    - RPMsg-Lite v5.1.4
+
 ## [24.12.00]
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.13.0
-    - eRPC generator (erpcgen) v.1.13.0
+    - eRPC generator (erpcgen) v1.13.0
     - Multicore Manager (MCMgr) v4.1.6
     - RPMsg-Lite v5.1.3
 
@@ -17,7 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.13.0
-    - eRPC generator (erpcgen) v.1.13.0
+    - eRPC generator (erpcgen) v1.13.0
     - Multicore Manager (MCMgr) v4.1.5
     - RPMsg-Lite v5.1.2
 
@@ -25,7 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.12.0
-    - eRPC generator (erpcgen) v.1.12.0
+    - eRPC generator (erpcgen) v1.12.0
     - Multicore Manager (MCMgr) v4.1.5
     - RPMsg-Lite v5.1.1
 
@@ -33,7 +49,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.11.0
-    - eRPC generator (erpcgen) v.1.11.0
+    - eRPC generator (erpcgen) v1.11.0
     - Multicore Manager (MCMgr) v4.1.4
     - RPMsg-Lite v5.1.0
 
@@ -41,7 +57,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.10.0
-    - eRPC generator (erpcgen) v.1.10.0
+    - eRPC generator (erpcgen) v1.10.0
     - Multicore Manager (MCMgr) v4.1.3
     - RPMsg-Lite v5.0.0
 
@@ -49,7 +65,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.10.0
-    - eRPC generator (erpcgen) v.1.10.0
+    - eRPC generator (erpcgen) v1.10.0
     - Multicore Manager (MCMgr) v4.1.3
     - RPMsg-Lite v5.0.0
 
@@ -57,7 +73,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.9.1
-    - eRPC generator (erpcgen) v.1.9.1
+    - eRPC generator (erpcgen) v1.9.1
     - Multicore Manager (MCMgr) v4.1.2
     - RPMsg-Lite v4.0.1
 
@@ -65,7 +81,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.9.1
-    - eRPC generator (erpcgen) v.1.9.1
+    - eRPC generator (erpcgen) v1.9.1
     - Multicore Manager (MCMgr) v4.1.2
     - RPMsg-Lite v4.0.0
 
@@ -73,7 +89,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.9.0
-    - eRPC generator (erpcgen) v.1.9.0
+    - eRPC generator (erpcgen) v1.9.0
     - Multicore Manager (MCMgr) v4.1.1
     - RPMsg-Lite v3.2.1
 
@@ -81,7 +97,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.9.0
-    - eRPC generator (erpcgen) v.1.9.0
+    - eRPC generator (erpcgen) v1.9.0
     - Multicore Manager (MCMgr) v4.1.1
     - RPMsg-Lite v3.2.0
 
@@ -89,7 +105,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.8.1
-    - eRPC generator (erpcgen) v.1.8.1
+    - eRPC generator (erpcgen) v1.8.1
     - Multicore Manager (MCMgr) v4.1.1
     - RPMsg-Lite v3.1.2
 
@@ -97,7 +113,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.8.0
-    - eRPC generator (erpcgen) v.1.8.0
+    - eRPC generator (erpcgen) v1.8.0
     - Multicore Manager (MCMgr) v4.1.1
     - RPMsg-Lite v3.1.1
 
@@ -105,7 +121,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.7.4
-    - eRPC generator (erpcgen) v.1.7.4
+    - eRPC generator (erpcgen) v1.7.4
     - Multicore Manager (MCMgr) v4.1.0
     - RPMsg-Lite v3.1.0
 
@@ -113,7 +129,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.7.3
-    - eRPC generator (erpcgen) v.1.7.3
+    - eRPC generator (erpcgen) v1.7.3
     - Multicore Manager (MCMgr) v4.1.0
     - RPMsg-Lite v3.0.0
 
@@ -121,7 +137,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.7.2
-    - eRPC generator (erpcgen) v.1.7.2
+    - eRPC generator (erpcgen) v1.7.2
     - Multicore Manager (MCMgr) v4.0.3
     - RPMsg-Lite v2.2.0
 
@@ -129,7 +145,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.7.1
-    - eRPC generator (erpcgen) v.1.7.1
+    - eRPC generator (erpcgen) v1.7.1
     - Multicore Manager (MCMgr) v4.0.2
     - RPMsg-Lite v2.0.2
 
@@ -137,7 +153,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.7.0
-    - eRPC generator (erpcgen) v.1.7.0
+    - eRPC generator (erpcgen) v1.7.0
     - Multicore Manager (MCMgr) v4.0.1
     - RPMsg-Lite v2.0.1
 
@@ -145,7 +161,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.6.0
-    - eRPC generator (erpcgen) v.1.6.0
+    - eRPC generator (erpcgen) v1.6.0
     - Multicore Manager (MCMgr) v4.0.0
     - RPMsg-Lite v1.2.0
 
@@ -153,7 +169,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.5.0
-    - eRPC generator (erpcgen) v.1.5.0
+    - eRPC generator (erpcgen) v1.5.0
     - Multicore Manager (MCMgr) v3.0.0
     - RPMsg-Lite v1.2.0
 
@@ -161,7 +177,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.4.0
-    - eRPC generator (erpcgen) v.1.4.0
+    - eRPC generator (erpcgen) v1.4.0
     - Multicore Manager (MCMgr) v2.0.1
     - RPMsg-Lite v1.1.0
 
@@ -169,13 +185,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.3.0
-    - eRPC generator (erpcgen) v.1.3.0
+    - eRPC generator (erpcgen) v1.3.0
 
 ## [2.0.0]
 
 - Multicore SDK component versions:
     - embedded Remote Procedure Call (eRPC) v1.2.0
-    - eRPC generator (erpcgen) v.1.2.0
+    - eRPC generator (erpcgen) v1.2.0
     - Multicore Manager (MCMgr) v2.0.0
     - RPMsg-Lite v1.0.0
 
