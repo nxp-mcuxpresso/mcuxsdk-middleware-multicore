@@ -2,20 +2,20 @@
   "SPDXID": "SPDXRef-DOCUMENT",
   "spdxVersion": "SPDX-2.3",
   "creationInfo": {
-    "created": "2025-05-26T09:15:51Z",
+    "created": "2025-09-01T12:57:22Z",
     "creators": [
       "Organization: NXP"
     ],
     "licenseListVersion": "3.20"
   },
-  "name": "mcux-sdk-middleware-multicore-v25.06.00",
+  "name": "mcux-sdk-middleware-multicore-v25.09.00",
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://nxp.com/spdx/69f16361-a14f-4d03-b89d-0d638adbf40b",
+  "documentNamespace": "https://nxp.com/spdx/c0abc61f-bc30-4852-a3da-eabd6202ecf5",
   "packages": [
     {
-      "SPDXID": "SPDXRef-package-69f16361-a14f-4d03-b89d-0d638adbf40b",
+      "SPDXID": "SPDXRef-package-c0abc61f-bc30-4852-a3da-eabd6202ecf5",
       "name": "mcux-sdk-middleware-multicore",
-      "versionInfo": "v25.06.00",
+      "versionInfo": "v25.09.00",
       "licenseConcluded": "(BSD-3-Clause)",
       "licenseDeclared": "(BSD-3-Clause)",
       "downloadLocation": "https://github.com/nxp-mcuxpresso/mcux-sdk-middleware-multicore",
@@ -53,10 +53,10 @@
     {
       "spdxElementId": "SPDXRef-DOCUMENT",
       "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-package-69f16361-a14f-4d03-b89d-0d638adbf40b"
+      "relatedSpdxElement": "SPDXRef-package-c0abc61f-bc30-4852-a3da-eabd6202ecf5"
     },
     {
-      "spdxElementId": "SPDXRef-package-69f16361-a14f-4d03-b89d-0d638adbf40b",
+      "spdxElementId": "SPDXRef-package-c0abc61f-bc30-4852-a3da-eabd6202ecf5",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-package-9ea1d2e9-251b-42e5-9e6d-2f4a76f429d0"
     }
