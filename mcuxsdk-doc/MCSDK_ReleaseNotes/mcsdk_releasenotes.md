@@ -8,9 +8,9 @@ multiprocessor communication.
 
 ## What is new
 
-- eRPC [CHANGELOG](https://github.com/EmbeddedRPC/erpc/blob/release/26.03.00/CHANGELOG.md)
-- RPMsg-Lite [CHANGELOG](https://github.com/nxp-mcuxpresso/rpmsg-lite/blob/release/26.03.00/CHANGELOG.md)
-- MCMgr [CHANGELOG](https://github.com/nxp-mcuxpresso/mcux-mcmgr/blob/release/26.03.00/CHANGELOG.md)
+- eRPC [CHANGELOG](https://github.com/EmbeddedRPC/erpc/blob/main/CHANGELOG.md)
+- RPMsg-Lite [CHANGELOG](https://github.com/nxp-mcuxpresso/rpmsg-lite/blob/main/CHANGELOG.md)
+- MCMgr [CHANGELOG](https://github.com/nxp-mcuxpresso/mcux-mcmgr/blob/main/CHANGELOG.md)
 
 - Supported evaluation boards (multicore examples):
   - LPCXpresso55S69
