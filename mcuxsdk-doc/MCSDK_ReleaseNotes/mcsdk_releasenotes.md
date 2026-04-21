@@ -2,101 +2,71 @@
 
 ## Overview
 
-These are the release notes for the NXP Multicore Software Development Kit (MCSDK) version 26.03.00.  
-This software package contains components for efficient work with multicore devices as well as for the  
-multiprocessor communication.
+These are the release notes for the NXP **Multicore Software Development Kit (MCSDK)**.
 
-## What is new
+| Item | Value |
+|---|---|
+| MCSDK version | **26.03.00** |
+| Scope | Multicore middleware components and examples |
+| Location in MCUXpresso SDK | `<MCUXpressoSDK_install_dir>/middleware/multicore/` |
 
-- eRPC [CHANGELOG](https://github.com/EmbeddedRPC/erpc/blob/main/CHANGELOG.md)
-- RPMsg-Lite [CHANGELOG](https://github.com/nxp-mcuxpresso/rpmsg-lite/blob/main/CHANGELOG.md)
-- MCMgr [CHANGELOG](https://github.com/nxp-mcuxpresso/mcux-mcmgr/blob/main/CHANGELOG.md)
+The MCSDK is combined with the MCUXpresso SDK to provide a framework for developing multicore applications on NXP devices.
 
-- Supported evaluation boards (multicore examples):
-  - LPCXpresso55S69
-  - FRDM-K32L3A6
-  - MIMXRT1170-EVKB
-  - MIMXRT1160-EVK
-  - MIMXRT1180-EVK
-  - MCX-N5XX-EVK
-  - MCX-N9XX-EVK
-  - FRDM-MCXN947
-  - MIMXRT700-EVK
-  - KW47-EVK
-  - KW47-LOC
-  - FRDM-MCXW72
-  - MCX-W72-EVK
-  - FRDM-IMXRT1186
+## What’s new
 
-- Supported evaluation boards (multiprocessor examples):
-  - LPCXpresso55S36
-  - FRDM-K22F
-  - FRDM-K32L2B
-  - MIMXRT685-EVK
-  - MIMXRT1170-EVKB
-  - MIMXRT1180
-  - FRDM-MCXN236
-  - FRDM-MCXC242
-  - FRDM-MCXC444
-  - MCX-N9XX-EVK
-  - FRDM-MCXN947
-  - MIMXRT700-EVK
-  - FRDM-IMXRT1186
+### Component updates
+
+Review detailed changes per component:
+
+- eRPC: [CHANGELOG](../../erpc/CHANGELOG.md)
+- RPMSG-Lite: [CHANGELOG](../../rpmsg-lite/CHANGELOG.md)
+- Multicore Manager (MCMGR): [CHANGELOG](../../mcmgr/CHANGELOG.md)
+
+### Supported evaluation boards
+
+Boards with enabled multicore example coverage in this release:
+
+| Multicore examples |
+|---|
+| LPCXpresso55S69<br>FRDM-K32L3A6<br>MIMXRT1170-EVKB<br>MIMXRT1160-EVK<br>MIMXRT1180-EVK<br>MCX-N5XX-EVK<br>MCX-N9XX-EVK<br>FRDM-MCXN947<br>MIMXRT700-EVK<br>KW47-EVK<br>KW47-LOC<br>FRDM-MCXW72<br>MCX-W72-EVK<br>FRDM-IMXRT1186 |
 
 ## Development tools
 
-The Multicore SDK (MCSDK) was compiled and tested with development tools referred in: [Development tools](https://mcuxpresso.nxp.com/mcuxsdk/latest/html/gsd/installation.html#toolchain)
+The MCSDK is compiled and tested with the toolchains described in the MCUXpresso SDK documentation:
+
+- https://mcuxpresso.nxp.com/mcuxsdk/latest/html/gsd/installation.html#toolchain
 
 ## Release contents
 
-This table describes the release contents. Not all MCUXpresso SDK packages contain the whole set of these components.
+This table describes the release contents. Not all MCUXpresso SDK packages contain the full set of these components.
 
-| Deliverable                              | Location                                                        |
-| ---------------------------------------- | --------------------------------------------------------------- |
-| Multicore SDK location `<MCSDK_dir>`     | `<MCUXpressoSDK_install_dir>/middleware/multicore/`             |
-| Documentation                            | `<MCSDK_dir>/mcuxsdk-doc/`                                      |
-| Embedded Remote Procedure Call component | `<MCSDK_dir>/erpc/`                                             |
-| Multicore Manager component              | `<MCSDK_dir>/mcmgr/`                                            |
-| RPMsg-Lite                               | `<MCSDK_dir>/rpmsg_lite/`                                       |
-| Multicore demo applications              | `<MCUXpressoSDK_install_dir>/examples/multicore_examples/`      |
-| Multiprocessor demo applications         | `<MCUXpressoSDK_install_dir>/examples/multiprocessor_examples/` |
+| Deliverable | Location |
+|---|---|
+| Multicore SDK location (`<MCSDK_dir>`) | `<MCUXpressoSDK_install_dir>/middleware/multicore/` |
+| Documentation | `<MCSDK_dir>/mcuxsdk-doc/` |
+| Embedded Remote Procedure Call (eRPC) | `<MCSDK_dir>/erpc/` |
+| Multicore Manager (MCMGR) | `<MCSDK_dir>/mcmgr/` |
+| RPMSG-Lite | `<MCSDK_dir>/rpmsg-lite/` |
+| Multicore demo applications | `<MCUXpressoSDK_install_dir>/examples/multicore_examples/` |
 
-## Multicore SDK release overview
+## MCSDK component overview
 
-Together, the Multicore SDK (MCSDK) and the MCUXpresso SDK (SDK) form a framework for the development of software for NXP multicore devices. The MCSDK release consists of the following elementary software components for multicore:
+Together, the MCSDK and the MCUXpresso SDK form a framework for developing software for NXP multicore devices. The MCSDK release includes:
 
 - Embedded Remote Procedure Call (eRPC)
-- Multicore Manager (MCMGR) - included just in SDK for multicore devices
-- Remote Processor Messaging - Lite (RPMsg-Lite) - included just in SDK for multicore devices
+- Multicore Manager (MCMGR)
+- Remote Processor Messaging – Lite (RPMSG-Lite)
 
-The MCSDK is also accompanied with documentation and several multicore and multiprocessor demo applications.
+The MCSDK also includes documentation and demo applications for multicore communication.
 
 ## Demo applications
 
-The multicore demo applications demonstrate the usage of the MCSDK software components on supported multicore development boards.  
-The following multicore demo applications are located together with other MCUXpresso SDK examples in  
-the _`<MCUXpressoSDK_install_dir>/examples/multicore_examples`_ subdirectories.
+The demo applications demonstrate MCSDK component usage on supported development boards.
 
-- erpc_matrix_multiply_mu
-- erpc_matrix_multiply_mu_rtos
-- erpc_matrix_multiply_rpmsg
-- erpc_matrix_multiply_rpmsg_rtos
-- erpc_two_way_rpc_rpmsg_rtos
-- freertos_message_buffers
-- hello_world
-- multicore_manager
-- rpmsg_lite_pingpong
-- rpmsg_lite_pingpong_rtos
-- rpmsg_lite_pingpong_dsp
-- rpmsg_lite_pingpong_tzm
+Examples are located under:
 
-The eRPC multicore component can be leveraged for inter-processor communication and remote procedure calls between SoCs / development boards.  
-The following multiprocessor demo applications are located together with other MCUXpresso SDK examples in  
-the _`<MCUXpressoSDK_install_dir>/examples/multiprocessor_examples`_ subdirectories.
+- Multicore: `<MCUXpressoSDK_install_dir>/examples/multicore_examples/`
 
-- erpc_client_matrix_multiply_spi
-- erpc_server_matrix_multiply_spi
-- erpc_client_matrix_multiply_uart
-- erpc_server_matrix_multiply_uart
-- erpc_server_dac_adc
-- erpc_remote_control
+| Multicore examples |
+|---|
+| `freertos_message_buffers`<br>`hello_world`<br>`multicore_manager`<br>`rpmsg_lite_pingpong`<br>`rpmsg_lite_pingpong_rtos`<br>`rpmsg_lite_pingpong_dsp`<br>`rpmsg_lite_pingpong_tzm` |
