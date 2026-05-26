@@ -6,7 +6,7 @@ These are the release notes for the NXP **Multicore Software Development Kit (MC
 
 | Item | Value |
 |---|---|
-| MCSDK version | **26.03.00** |
+| MCSDK version | **26.06.00** |
 | Scope | Multicore middleware components and examples |
 | Location in MCUXpresso SDK | `<MCUXpressoSDK_install_dir>/middleware/multicore/` |
 
