@@ -34,7 +34,7 @@ Boards with enabled multicore example coverage in this release:
 
 The MCSDK is compiled and tested with the toolchains described in the MCUXpresso SDK documentation:
 
-- https://mcuxpresso.nxp.com/mcuxsdk/latest/html/gsd/installation.html#toolchain
+- https://docs.mcuxpresso.nxp.com/mcuxsdk/latest/gsd/installation.html#toolchain
 
 ## Release contents
 
